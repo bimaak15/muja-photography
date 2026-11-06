@@ -1,0 +1,202 @@
+﻿/* ============================================================
+   MUJA PHOTOGRAPHY — Custom Hero Enhancements
+   - Dark overlay on block backgrounds
+   - Elegant wedding-style typography (Cormorant Garamond)
+   - Gold accent palette
+   - Cinematic vignette, decorative ornaments, refined spacing
+============================================================ */
+
+/* --- CSS Variables --- */
+:root {
+    --gold:       #c9a96e;
+    --gold-light: #e8d5b0;
+    --gold-dark:  #9a7440;
+    --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+}
+
+/* ============================================================
+   1. ELEGANT TYPOGRAPHY — Overlay intro text
+============================================================ */
+
+.overlay__column {
+    font-family: var(--font-display) !important;
+    font-style: italic;
+    letter-spacing: 0.04em;
+}
+
+.overlay__text {
+    font-weight: 300 !important;
+    letter-spacing: 0.06em;
+    text-transform: none !important;
+    line-height: 1.15 !important;
+}
+
+.overlay h1.overlay__text div {
+    font-size: 1.05em;
+    font-weight: 600 !important;
+    font-style: normal;
+    color: #e8d5b0;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.overlay h2.overlay__text div {
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.overlay__column--cta {
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.75rem !important;
+    font-style: normal !important;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.overlay__column--cta span {
+    color: #c9a96e !important;
+    font-weight: 500;
+}
+
+.overlay__column:first-child::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 1px;
+    background: linear-gradient(90deg, #c9a96e, transparent);
+    margin: 0.75rem 0 0.5rem 0;
+    opacity: 0.7;
+}
+
+/* ============================================================
+   2. DARK OVERLAY on each hero block background image
+============================================================ */
+
+.block {
+    isolation: isolate;
+}
+
+.block::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 3, 2, 0.65) 0%,
+        rgba(5, 3, 2, 0.38) 40%,
+        rgba(5, 3, 2, 0.45) 70%,
+        rgba(5, 3, 2, 0.72) 100%
+    );
+    pointer-events: none;
+}
+
+.block__container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================================
+   3. BLOCK TEXT — Elegant serif typography
+============================================================ */
+
+.block__text {
+    font-family: var(--font-display) !important;
+    font-size: clamp(1.35rem, 2.2vw, 2rem) !important;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.65;
+    letter-spacing: 0.025em;
+    color: rgba(255, 255, 255, 0.93);
+    max-width: 24rem !important;
+    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+}
+
+.block__content p.block__text:first-child {
+    font-style: normal;
+    font-weight: 500;
+    color: #e8d5b0;
+    letter-spacing: 0.04em;
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem) !important;
+}
+
+/* ============================================================
+   4. DECORATIVE ORNAMENT
+============================================================ */
+
+.block__content::before {
+    content: "— \2726 —";
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    letter-spacing: 0.35em;
+    color: #c9a96e;
+    opacity: 0.75;
+    margin-bottom: 1.25rem;
+    grid-column: 1 / -1;
+}
+
+/* ============================================================
+   5. BLOCK background image — slightly desaturated
+============================================================ */
+
+.block__background {
+    filter: brightness(0.82) saturate(0.88) !important;
+    transition: filter 0.6s ease;
+}
+
+.block:hover .block__background {
+    filter: brightness(0.72) saturate(0.80) !important;
+}
+
+/* ============================================================
+   6. SCROLL INDICATOR — animated chevron
+============================================================ */
+
+.block:first-of-type .block__container {
+    position: relative;
+}
+
+.block:first-of-type .block__container::after {
+    content: "";
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-right: 1.5px solid #c9a96e;
+    border-bottom: 1.5px solid #c9a96e;
+    transform: translateX(-50%) rotate(45deg);
+    animation: scrollChevron 1.8s ease-in-out infinite;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+@keyframes scrollChevron {
+    0%, 100% { transform: translateX(-50%) translateY(0) rotate(45deg); opacity: 0.7; }
+    50%       { transform: translateX(-50%) translateY(8px) rotate(45deg); opacity: 0.3; }
+}
+
+/* ============================================================
+   7. RESPONSIVE — mobile
+============================================================ */
+
+@media (max-width: 48rem) {
+    .overlay__column:first-child::after {
+        margin: 0.5rem auto 0.25rem;
+    }
+
+    .block__content::before {
+        text-align: center;
+    }
+
+    .block__text {
+        text-align: center;
+    }
+
+    .block__content p.block__text:first-child {
+        font-size: clamp(1.3rem, 5vw, 1.7rem) !important;
+    }
+}

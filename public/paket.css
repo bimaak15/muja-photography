@@ -1,0 +1,738 @@
+/* ============================================================
+   MUJA PHOTOGRAPHY — Halaman Paket & Harga
+   Nuansa sama dengan beranda: cream, ink, aksen emas.
+============================================================ */
+
+/* ------------------------------------------------------------
+   HERO HALAMAN
+------------------------------------------------------------ */
+.price-hero {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: clamp(34rem, 82vh, 48rem);
+    padding: clamp(9rem, 17vh, 12rem) clamp(1.5rem, 5vw, 4rem) clamp(4rem, 9vh, 6.5rem);
+    overflow: hidden;
+    text-align: center;
+    background-color: #0c0a09;
+}
+
+.price-hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.price-hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 40%;
+    filter: saturate(0.72) brightness(0.62);
+    transform: scale(1.03);
+}
+
+.price-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to bottom,
+        rgba(8, 7, 6, 0.86) 0%,
+        rgba(8, 7, 6, 0.38) 34%,
+        rgba(8, 7, 6, 0.55) 70%,
+        rgba(8, 7, 6, 0.94) 100%
+    );
+    pointer-events: none;
+}
+
+.price-hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 48rem;
+}
+
+.price-hero__ornament {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.35em;
+    color: rgba(201, 169, 110, 0.7);
+    margin-bottom: 1.75rem;
+}
+
+.price-hero .section-label {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    color: #c9a96e;
+}
+
+.price-hero__title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.5rem, 5.8vw, 4.9rem);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: 0.01em;
+    color: #f7f2ea;
+    margin-bottom: 1.75rem;
+    text-wrap: balance;
+}
+
+.price-hero__title em {
+    font-style: italic;
+    color: #e8d5b0;
+}
+
+.price-hero__sub {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(0.88rem, 1.05vw, 1rem);
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 38rem;
+    margin: 0 auto;
+}
+
+
+/* ------------------------------------------------------------
+   HEADER SEKSI
+------------------------------------------------------------ */
+.price-header {
+    max-width: 44rem;
+    margin: 0 auto clamp(2.5rem, 5vw, 3.5rem);
+    text-align: center;
+}
+
+.price-intro {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price-section {
+    padding-bottom: clamp(4rem, 7vw, 6rem);
+}
+
+
+/* ------------------------------------------------------------
+   PEMILIH LOKASI ACARA (pure CSS — tanpa JavaScript)
+------------------------------------------------------------ */
+.venue-switch {
+    position: relative;
+}
+
+.venue-switch__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.venue-switch__labels {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: clamp(2.5rem, 5vw, 3.25rem);
+}
+
+.venue-switch__label {
+    padding: 0.75rem 1.75rem;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(26, 23, 20, 0.5);
+    border: 1px solid rgba(26, 23, 20, 0.16);
+    background-color: transparent;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    user-select: none;
+}
+
+.venue-switch__label:hover {
+    color: #1a1714;
+    border-color: rgba(26, 23, 20, 0.4);
+}
+
+#venue-rumah:checked ~ .venue-switch__labels label[for="venue-rumah"],
+#venue-gedung:checked ~ .venue-switch__labels label[for="venue-gedung"] {
+    background-color: #0c0a09;
+    border-color: #0c0a09;
+    color: #f5f0ea;
+}
+
+.venue-switch__input:focus-visible ~ .venue-switch__labels label {
+    outline: 2px solid rgba(154, 116, 64, 0.6);
+    outline-offset: 3px;
+}
+
+/* Tampilan default: paket rumah tampil, gedung tersembunyi */
+.price-grid--venue[data-venue="gedung"] {
+    display: none;
+}
+
+#venue-gedung:checked ~ .price-grid--venue[data-venue="rumah"] {
+    display: none;
+}
+
+#venue-gedung:checked ~ .price-grid--venue[data-venue="gedung"] {
+    display: grid;
+}
+
+
+/* ------------------------------------------------------------
+   KARTU PAKET
+------------------------------------------------------------ */
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1rem, 2vw, 1.75rem);
+    align-items: stretch;
+}
+
+.price-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(2rem, 3vw, 2.75rem) clamp(1.5rem, 2.4vw, 2.25rem);
+    background-color: #fffdf9;
+    border: 1px solid rgba(26, 23, 20, 0.08);
+    transition: transform 0.45s ease, box-shadow 0.45s ease, border-color 0.45s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(201, 169, 110, 0.45);
+    box-shadow: 0 24px 60px rgba(26, 23, 20, 0.1);
+}
+
+.price-card--featured {
+    background-color: #0c0a09;
+    border-color: rgba(201, 169, 110, 0.35);
+    color: #f5f0ea;
+    box-shadow: 0 24px 70px rgba(12, 10, 9, 0.22);
+}
+
+.price-card--featured:hover {
+    border-color: rgba(201, 169, 110, 0.6);
+    box-shadow: 0 30px 80px rgba(12, 10, 9, 0.3);
+}
+
+.price-badge {
+    position: absolute;
+    top: 0;
+    right: clamp(1.5rem, 2.4vw, 2.25rem);
+    transform: translateY(-50%);
+    padding: 0.45rem 1rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.58rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #0c0a09;
+    background: linear-gradient(135deg, #c9a96e, #e8d5b0);
+}
+
+.price-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.8rem, 2.6vw, 2.35rem);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+}
+
+.price-tagline {
+    font-family: "Inter", sans-serif;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #9a7440;
+    margin-bottom: 1.75rem;
+}
+
+.price-card--featured .price-tagline {
+    color: #c9a96e;
+}
+
+.price-value {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(26, 23, 20, 0.1);
+    font-family: "Cormorant Garamond", Georgia, serif;
+    color: #1a1714;
+}
+
+.price-card--featured .price-value {
+    border-color: rgba(255, 255, 255, 0.12);
+    color: #f5f0ea;
+}
+
+.price-currency {
+    padding-top: 0.45rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #9a7440;
+}
+
+.price-amount {
+    font-size: clamp(2.1rem, 3vw, 2.9rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: 0.01em;
+}
+
+.price-unit {
+    font-family: "Inter", sans-serif;
+    font-size: 0.66rem;
+    font-weight: 300;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(26, 23, 20, 0.42);
+    margin-top: 0.55rem;
+}
+
+.price-card--featured .price-unit {
+    color: rgba(245, 240, 234, 0.45);
+}
+
+.price-features {
+    display: grid;
+    gap: 0.72rem;
+    align-content: start;
+    flex: 1 1 auto;
+    list-style: none;
+    margin: 1.6rem 0 2rem;
+    padding: 0;
+}
+
+.price-features li {
+    position: relative;
+    padding-left: 1.35rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(26, 23, 20, 0.68);
+}
+
+.price-features li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 0.6rem;
+    height: 1px;
+    background-color: #c9a96e;
+}
+
+.price-card--featured .price-features li {
+    color: rgba(245, 240, 234, 0.66);
+}
+
+.price-cta {
+    display: block;
+    padding: 1rem 1.5rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.64rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease,
+        transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-outline-dark {
+    border: 1px solid rgba(26, 23, 20, 0.25);
+    color: #1a1714;
+}
+
+.btn-outline-dark:hover {
+    border-color: #1a1714;
+    background-color: #1a1714;
+    color: #f5f0ea;
+}
+
+.price-note {
+    max-width: 44rem;
+    margin: 2.5rem auto 0;
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 300;
+    line-height: 1.9;
+    text-align: center;
+    color: rgba(26, 23, 20, 0.42);
+}
+
+.price-note a {
+    color: #9a7440;
+    border-bottom: 1px solid rgba(154, 116, 64, 0.35);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.price-note a:hover {
+    color: #1a1714;
+    border-color: rgba(26, 23, 20, 0.4);
+}
+
+
+/* ------------------------------------------------------------
+   CATATAN PENTING
+------------------------------------------------------------ */
+.included-section {
+    padding-top: clamp(3.5rem, 6vw, 5rem);
+    padding-bottom: clamp(3.5rem, 6vw, 5rem);
+    border-top: 1px solid rgba(201, 169, 110, 0.12);
+    border-bottom: 1px solid rgba(201, 169, 110, 0.12);
+}
+
+.included-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+.included-item {
+    padding-left: clamp(1rem, 1.6vw, 1.5rem);
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.included-item:first-child {
+    padding-left: 0;
+    border-left: 0;
+}
+
+.included-number {
+    display: block;
+    margin-bottom: 0.85rem;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.22em;
+    color: rgba(201, 169, 110, 0.65);
+}
+
+.included-title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.55rem;
+}
+
+.included-desc {
+    font-family: "Inter", sans-serif;
+    font-size: 0.76rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.42);
+}
+
+
+/* ------------------------------------------------------------
+   DAFTAR PAKET LAINNYA
+------------------------------------------------------------ */
+.price-list {
+    border-top: 1px solid rgba(26, 23, 20, 0.1);
+}
+
+.price-row {
+    display: grid;
+    grid-template-columns: minmax(9rem, 15rem) 1fr;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    padding: clamp(2rem, 3.5vw, 3rem) 0;
+    border-bottom: 1px solid rgba(26, 23, 20, 0.1);
+}
+
+.price-row__label {
+    align-self: start;
+}
+
+.price-row__title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.01em;
+    color: #1a1714;
+    margin-bottom: 0.5rem;
+}
+
+.price-row__catatan {
+    font-family: "Inter", sans-serif;
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(26, 23, 20, 0.42);
+    line-height: 1.7;
+}
+
+.price-row__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1px;
+    background-color: rgba(26, 23, 20, 0.1);
+    border: 1px solid rgba(26, 23, 20, 0.1);
+}
+
+.price-mini {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: clamp(1.4rem, 2vw, 1.85rem);
+    background-color: #fffdf9;
+    transition: background-color 0.3s ease;
+}
+
+.price-mini:hover {
+    background-color: #ffffff;
+}
+
+.price-mini__head {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(26, 23, 20, 0.08);
+}
+
+.price-mini__name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #1a1714;
+}
+
+.price-mini__price {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.5rem, 2vw, 1.85rem);
+    font-weight: 300;
+    line-height: 1;
+    color: #1a1714;
+}
+
+.price-mini__price span {
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #9a7440;
+    margin-right: 0.35rem;
+}
+
+.price-mini__features {
+    display: grid;
+    gap: 0.55rem;
+    flex: 1 1 auto;
+    align-content: start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.price-mini__features li {
+    position: relative;
+    padding-left: 1.2rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.73rem;
+    font-weight: 300;
+    line-height: 1.55;
+    color: rgba(26, 23, 20, 0.62);
+}
+
+.price-mini__features li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 0.55rem;
+    height: 1px;
+    background-color: #c9a96e;
+}
+
+.price-mini__link {
+    align-self: flex-start;
+    padding-bottom: 0.2rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #9a7440;
+    border-bottom: 1px solid rgba(154, 116, 64, 0.3);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.price-mini__link:hover {
+    color: #1a1714;
+    border-color: rgba(26, 23, 20, 0.4);
+}
+
+
+/* ------------------------------------------------------------
+   FAQ
+------------------------------------------------------------ */
+.faq-header {
+    margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+    text-align: center;
+}
+
+.faq-list {
+    max-width: 52rem;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.4rem 0;
+    cursor: pointer;
+    list-style: none;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.3s ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    flex: 0 0 auto;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1;
+    color: #c9a96e;
+    transition: transform 0.35s ease;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-item summary:hover {
+    color: #e8d5b0;
+}
+
+.faq-answer {
+    max-width: 46rem;
+    padding: 0 2.5rem 1.6rem 0;
+    font-family: "Inter", sans-serif;
+    font-size: 0.83rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ------------------------------------------------------------
+   CTA — baris kontak
+------------------------------------------------------------ */
+.cta-contact {
+    margin-top: 2.25rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.66rem;
+    font-weight: 300;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* ------------------------------------------------------------
+   RESPONSIVE
+------------------------------------------------------------ */
+@media (max-width: 64rem) {
+    .price-grid {
+        grid-template-columns: 1fr;
+        max-width: 30rem;
+        margin: 0 auto;
+    }
+
+    .included-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .included-item:nth-child(odd) {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    .price-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    .price-hero {
+        min-height: 0;
+        padding-top: clamp(8rem, 18vh, 10rem);
+    }
+
+    .price-grid {
+        max-width: none;
+    }
+
+    .venue-switch__labels {
+        gap: 0.5rem;
+    }
+
+    .venue-switch__label {
+        padding: 0.7rem 1.1rem;
+        letter-spacing: 0.14em;
+    }
+
+    .included-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .included-item {
+        padding-left: 1rem;
+    }
+
+    .included-item:nth-child(odd) {
+        padding-left: 1rem;
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .price-row__items {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-answer {
+        padding-right: 1.5rem;
+    }
+
+    .cta-contact {
+        font-size: 0.6rem;
+        letter-spacing: 0.08em;
+    }
+}

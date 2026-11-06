@@ -1,0 +1,808 @@
+
+:root {
+  --navbar-black: #000000;
+  --navbar-white: #ffffff;
+  --navbar-yellow: #fff3d8;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.container {
+  width: 1560px;
+  min-width: 1560px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.container .row {
+  display: flex;
+  height: 100%;
+  padding: 0 32px;
+}
+
+.container .v-center {
+  align-items: center;
+}
+
+.container .space-between {
+  justify-content: space-between;
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.container-fluid .row {
+  display: flex;
+  height: 100%;
+}
+
+.intro-overlay .top {
+  height: calc(var(--vh, 1vh) * 50);
+  position: absolute;
+  width: 100%;
+  z-index: 8;
+}
+
+.intro-overlay .top .overlay-top {
+  position: absolute;
+  height: 100%;
+  width: 33.333vw;
+  background: var(--navbar-black);
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.intro-overlay .top .overlay-top:nth-child(2) {
+  left: 33.333%;
+}
+
+.intro-overlay .top .overlay-top:nth-child(3) {
+  left: 66.666%;
+}
+
+.intro-overlay .bottom {
+  height: calc(var(--vh, 1vh) * 50);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 8;
+}
+
+.intro-overlay .bottom .overlay-bottom {
+  position: absolute;
+  height: 100%;
+  width: 33.333vw;
+  background: var(--navbar-black);
+  bottom: 0;
+  right: 66.666%;
+}
+
+.intro-overlay .bottom .overlay-bottom:nth-child(2) {
+  right: 33.333%;
+}
+
+.intro-overlay .bottom .overlay-bottom:nth-child(3) {
+  right: 0;
+}
+
+.App {
+  z-index: 2;
+  transform: translateY(0);
+  position: relative;
+}
+
+/* Aturan .page { height: 100vh; background: #fff } dari library/navbar DIHAPUS.
+   main.page dipakai hero (beranda) dan harus mengikuti tinggi seluruh blok.
+   Dengan height: 100vh, .wrapper { overflow: clip } memotong blok 2-4 sehingga
+   dokumen tidak bisa di-scroll; background putih juga menutupi foto .block__background.
+   Tidak ada view lain yang memakai class .page. */
+
+.page .row {
+  display: flex;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 128px;
+  z-index: 4;
+}
+
+.header .logo a {
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+  color: var(--navbar-black);
+  font-weight: 700;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-toggle .hamburger-menu {
+  width: 25px;
+}
+
+.nav-toggle .hamburger-menu span {
+  text-align: center;
+  margin-bottom: 0.3rem;
+  background: var(--navbar-black);
+  height: 2px;
+  width: 100%;
+  display: block;
+}
+
+.nav-toggle .hamburger-menu span:last-child {
+  margin-bottom: 0;
+}
+
+.nav-toggle .hamburger-menu-close {
+  position: absolute;
+  display: none;
+  width: 64px;
+  height: 64px;
+}
+
+.nav-toggle .hamburger-menu-close svg {
+  width: 64px;
+  height: 64px;
+}
+
+.main {
+  height: calc(var(--vh, 1vh) * 50);
+  background-color: var(--navbar-white);
+}
+
+.main .row {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main .row h2 {
+  font-size: 3rem;
+  line-height: 4.2rem;
+  font-weight: 700;
+  z-index: 10;
+  color: var(--navbar-white);
+  mix-blend-mode: difference;
+}
+
+.main .row h2 .line {
+  margin-bottom: 8px;
+  height: 56px;
+  position: relative;
+  overflow: hidden;
+}
+
+.main .row h2 .line span {
+  position: absolute;
+}
+
+.main .row .btn-row {
+  width: 256px;
+  position: relative;
+  z-index: 2;
+}
+
+.main .row .btn-row a {
+  font-size: 1.6rem;
+  color: var(--navbar-black);
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.main .row .btn-row a svg {
+  margin-left: 16px;
+  border: 2px solid var(--navbar-black);
+  padding: 12px;
+  height: 24px;
+  width: 24px;
+  border-radius: 100px;
+  transition: 0.4s ease-in-out;
+}
+
+.main .row .btn-row a:hover svg {
+  background: var(--navbar-black);
+  color: var(--navbar-white);
+}
+
+.cases {
+  height: calc(var(--vh, 1vh) * 50);
+}
+
+.cases-navigation {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 6;
+  padding: 32px;
+}
+
+.cases-navigation .cases-arrow {
+  background: rgba(0, 0, 0, 0.4);
+  height: 72px;
+  width: 72px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cases-navigation .cases-arrow svg {
+  color: var(--navbar-white);
+  height: 28px;
+  width: 28px;
+}
+
+.cases-navigation .cases-arrow.disabled {
+  opacity: 0.3;
+}
+
+.cases .row .case {
+  position: relative;
+  background: var(--navbar-black);
+  cursor: pointer;
+  width: 33.3333%;
+}
+
+.cases .row .case:hover .case-image {
+  opacity: 0.4;
+}
+
+.cases .row .case .case-details {
+  width: 33.3333vw;
+  height: calc(var(--vh, 1vh) * 50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  z-index: 1;
+  position: relative;
+}
+
+.cases .row .case .case-details span {
+  margin-top: 156px;
+  font-size: 1.6rem;
+  opacity: 0.8;
+  color: var(--navbar-white);
+  font-weight: 600;
+}
+
+.cases .row .case .case-details h2 {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  width: 85%;
+  margin-top: 16px;
+  color: var(--navbar-white);
+}
+
+.cases .row .case .case-image {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0.65;
+  transition: 0.4s cubic-bezier(0.6, -0.05, 0.1, 0.99);
+}
+
+.cases .row .case .case-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#site-nav {
+  left: 0;
+  top: -1px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  background: var(--navbar-yellow);
+}
+
+#site-nav a {
+  position: relative;
+}
+
+#site-nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: var(--navbar-black);
+  transition: 0.4s ease;
+}
+
+#site-nav a:hover {
+  color: pink;
+}
+
+#site-nav a:hover::after {
+  width: 100%;
+  left: 0;
+  background: var(--navbar-black);
+}
+
+.nav-columns {
+  transform: translateY(125px);
+  display: flex;
+  padding: 0 32px;
+}
+
+.nav-column {
+  width: 45%;
+}
+
+.nav-column:last-child {
+  width: 55%;
+}
+
+.nav-label {
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+}
+
+.nav-infos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-info {
+  padding: 0;
+  width: 50%;
+}
+
+.nav-info .nav-info-label {
+  font-weight: 600;
+}
+
+.nav-info li {
+  font-weight: 300;
+  list-style: none;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.nav-links {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  list-style: none;
+  margin-bottom: 2.4rem;
+}
+
+.nav-links li a {
+  font-weight: 600;
+  font-size: 2.8rem;
+  color: var(--navbar-black);
+}
+
+@media (max-width: 1560px) {
+  .container {
+    width: 1280px;
+    min-width: 1280px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .container {
+    width: 1080px;
+    min-width: 1080px;
+  }
+
+  .cases .row .case .case-details span {
+    font-size: 1.4rem;
+  }
+
+  .cases .row .case .case-details h2 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-overlay .top .overlay-top,
+  .intro-overlay .bottom .overlay-bottom {
+    width: 100vw;
+  }
+
+  .intro-overlay .top .overlay-top:nth-child(2),
+  .intro-overlay .top .overlay-top:nth-child(3) {
+    display: none;
+  }
+
+  .intro-overlay .bottom .overlay-bottom {
+    right: 0;
+  }
+
+  .intro-overlay .bottom .overlay-bottom:nth-child(2) {
+    width: 100vw;
+    top: 100%;
+    right: 0;
+  }
+
+  .intro-overlay .bottom .overlay-bottom:nth-child(3) {
+    width: 100vw;
+    top: 200%;
+  }
+
+  .main .row h2 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  .main .row h2 .line {
+    height: 48px;
+  }
+
+  .main .row .btn-row a {
+    font-size: 1.3rem;
+  }
+
+  .main .row .btn-row a svg {
+    padding: 6px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .cases-navigation {
+    display: none;
+  }
+
+  .cases .row {
+    flex-direction: column;
+  }
+
+  .cases .row .case,
+  .cases .row .case .case-details {
+    width: 100vw;
+  }
+
+  .nav-toggle {
+    margin-right: 24px;
+  }
+
+  .nav-toggle .hamburger-menu-close svg {
+    width: 56px;
+  }
+
+  .nav-label {
+    font-size: 1rem;
+    margin-bottom: 1.4rem;
+  }
+
+  .nav-info li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 654px) {
+  .nav-columns {
+    flex-direction: column;
+  }
+
+  .nav-column,
+  .nav-column:last-child {
+    width: 100%;
+  }
+
+  .nav-infos {
+    justify-content: space-between;
+  }
+
+  .nav-info:nth-child(2),
+  .nav-info:nth-child(3) {
+    display: none;
+  }
+
+  .App {
+    background: var(--navbar-white);
+  }
+}
+
+@media (max-width: 425px) {
+  .container .row,
+  .nav-columns {
+    padding: 0 16px;
+  }
+
+  .header {
+    height: 96px;
+  }
+
+  .nav-toggle {
+    width: 20px;
+    margin-right: 16px;
+  }
+
+  .nav-toggle .hamburger-menu-close svg {
+    width: 48px;
+  }
+
+  .main .row h2 {
+    margin-top: 72px;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+  }
+
+  .main .row h2 .line {
+    height: 32px;
+  }
+
+  .main .row .btn-row a {
+    font-size: 1.1rem;
+  }
+
+  .main .row .btn-row a svg {
+    padding: 4px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .cases .row .case .case-details {
+    padding: 16px;
+  }
+
+  .cases .row .case .case-details span {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  .cases .row .case .case-details h2 {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    margin-top: 8px;
+  }
+
+  .nav-label {
+    font-size: 0.875rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .nav-info li {
+    font-size: 1rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .nav-links li {
+    margin-bottom: 1.6rem;
+  }
+
+  .nav-links li a {
+    font-size: 2rem;
+  }
+}
+
+
+/* ======================================================
+   MUJAPHOTOGRAPHY NAVBAR � Tema Hitam Putih + Bebas Neue
+   ====================================================== */
+
+/* -- Variabel utama -- */
+:root {
+  --nb-bg-nav:    #0a0a0a;
+  --nb-text-nav:  #ffffff;
+  --nb-accent:    #ffffff;
+  --nb-booking-bg:   #ffffff;
+  --nb-booking-text: #0a0a0a;
+  --nb-label-color:  rgba(255,255,255,0.35);
+  --nb-link-hover:   rgba(255,255,255,0.5);
+}
+
+/* -- Header: transparan & putih di atas hero gelap -- */
+#site-header {
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 7, 6, 0.72) 0%,
+    rgba(8, 7, 6, 0.4) 55%,
+    rgba(8, 7, 6, 0) 100%
+  );
+  z-index: 100;
+}
+
+#site-header .logo a {
+  color: #ffffff;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: 1.4rem;
+}
+
+#site-header .hamburger-menu span {
+  background: #ffffff;
+}
+
+/* -- Nav fullscreen: hitam pekat -- */
+#site-nav {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  overflow: hidden;
+  background: var(--nb-bg-nav);
+}
+
+/* Nav columns area: vertically centered */
+#site-nav .nav-columns {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 64px;
+  padding-top: 0;
+  height: 100%;
+  align-items: center;
+}
+
+/* -- Label section -- */
+#site-nav .nav-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: var(--nb-label-color);
+  margin-bottom: 2.5rem;
+}
+
+/* -- Nav links: Bebas Neue besar -- */
+#site-nav .nav-links li a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4.5rem;
+  letter-spacing: 0.08rem;
+  color: var(--nb-text-nav);
+  line-height: 1;
+  transition: opacity 0.25s ease;
+  text-transform: uppercase;
+}
+
+#site-nav .nav-links li a:hover {
+  opacity: 0.4;
+  color: var(--nb-text-nav);
+}
+
+/* Reset underline dari library asli */
+#site-nav a::after {
+  display: none;
+}
+#site-nav a:hover {
+  color: unset;
+}
+
+/* -- BOOKING SEKARANG � tombol istimewa -- */
+#site-nav .nav-links li.nav-booking a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  background: var(--nb-booking-bg);
+  color: var(--nb-booking-text);
+  padding: 0.85rem 2rem;
+  border-radius: 100px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.25s ease;
+  margin-top: 0.75rem;
+}
+
+#site-nav .nav-links li.nav-booking a::before {
+  content: "?";
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+#site-nav .nav-links li.nav-booking a:hover {
+  background: rgba(255,255,255,0.85);
+  color: #000000;
+  opacity: 1;
+  transform: translateX(6px);
+}
+
+/* -- Info kolom kanan: Inter -- */
+#site-nav .nav-info .nav-info-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--nb-label-color);
+}
+
+#site-nav .nav-info li {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--nb-text-nav);
+  margin-bottom: 0.6rem;
+}
+
+#site-nav .nav-info li a:hover {
+  opacity: 0.5;
+  color: var(--nb-text-nav);
+}
+
+/* -- Hamburger close (warna putih) -- */
+#site-header .nav-toggle .hamburger-menu-close svg line,
+#site-header .nav-toggle .hamburger-menu-close svg path {
+  stroke: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #site-nav .nav-columns {
+    padding: 0 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  #site-nav .nav-links li a {
+    font-size: 3rem;
+  }
+
+  #site-nav .nav-links li.nav-booking a {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  #site-nav .nav-columns {
+    padding: 0 20px;
+  }
+
+  #site-nav .nav-links li a {
+    font-size: 2.4rem;
+  }
+}
