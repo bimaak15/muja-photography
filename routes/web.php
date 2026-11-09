@@ -60,33 +60,65 @@ Route::get('/kontak', function () {
 
 Route::prefix('admin')->name('admin.')->group(function () {
 
-    /** Ringkasan — /admin */
+    /** Dashboard Utama — /admin */
     Route::get('/', function () {
-        return view('coming-soon');
+        return view('admin.dashboard');
     })->name('dashboard');
 
     /** Daftar booking — /admin/booking */
     Route::get('/booking', function () {
-        return view('coming-soon');
+        return view('admin.bookings');
     })->name('booking');
 
-    /** Kalender — /admin/kalender */
+    /** Buat booking baru — /admin/booking/create */
+    Route::get('/booking/create', function () {
+        return view('admin.booking-create');
+    })->name('booking.create');
+
+    /** Packages / Daftar Paket — /admin/packages */
+    Route::get('/packages', function () {
+        return view('admin.packages');
+    })->name('packages');
+
+    /** Tambah Paket Baru — /admin/packages/create */
+    Route::get('/packages/create', function () {
+        return view('admin.package-create');
+    })->name('packages.create');
+
+    /** Schedule / Jadwal Pemotretan — /admin/schedule */
+    Route::get('/schedule', function () {
+        return view('admin.schedule');
+    })->name('schedule');
+
+    /** Tambah Jadwal Sesi — /admin/schedule/create */
+    Route::get('/schedule/create', function () {
+        return view('admin.schedule-create');
+    })->name('schedule.create');
+
+    /** Customer Database — /admin/customer */
+    Route::get('/customer', function () {
+        return view('admin.customer');
+    })->name('customer');
+
+    /** Settings / Pengaturan Studio, Akun & Pembayaran — /admin/settings */
+    Route::get('/settings', function () {
+        return view('admin.settings');
+    })->name('settings');
+
+    /** Rute PRD legacy / backward-compatibility aliases */
     Route::get('/kalender', function () {
-        return view('coming-soon');
+        return redirect()->route('admin.schedule');
     })->name('kalender');
 
-    /** Album acara — /admin/album */
+    Route::get('/portofolio', function () {
+        return redirect()->route('admin.packages');
+    })->name('portofolio');
+
     Route::get('/album', function () {
         return view('coming-soon');
     })->name('album');
 
-    /** Pesanan foto HD — /admin/pesanan-foto */
     Route::get('/pesanan-foto', function () {
         return view('coming-soon');
     })->name('pesanan-foto');
-
-    /** Portofolio & paket — /admin/portofolio */
-    Route::get('/portofolio', function () {
-        return view('coming-soon');
-    })->name('portofolio');
 });
