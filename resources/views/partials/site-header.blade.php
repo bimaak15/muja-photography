@@ -13,8 +13,7 @@
             {{-- Hamburger Toggle --}}
             <div class="nav-toggle">
                 <button class="hamburger-menu" aria-label="Buka menu">
-                    <span></span>
-                    <span></span>
+                    <img src="{{ asset('menu.svg') }}" alt="" width="39" height="39">
                 </button>
                 <button class="hamburger-menu-close" aria-label="Tutup menu">
                     <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64"
