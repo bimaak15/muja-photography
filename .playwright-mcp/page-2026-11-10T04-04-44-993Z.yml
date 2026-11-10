@@ -1,0 +1,361 @@
+- generic [ref=f3e2]:
+  - banner [ref=f3e3]:
+    - generic [ref=f3e5]:
+      - link [ref=f3e7] [cursor=pointer]:
+        - /url: http://127.0.0.1:8000
+        - img "Muja Photography Logo" [ref=f3e8]
+      - button "Buka menu" [ref=f3e10] [cursor=pointer]
+  - main [ref=f3e11]:
+    - generic [ref=f3e12]:
+      - img "Pasangan pengantin di depan backdrop bertema galaksi — MujaPhotography" [ref=f3e15]
+      - generic [ref=f3e16]:
+        - paragraph [aria-hidden] [ref=f3e17]: — ✦ —
+        - generic [ref=f3e18]: Paket & Harga
+        - heading [level=1] [ref=f3e19]:
+          - text: Investasi untuk
+          - emphasis [ref=f3e20]: Kenangan
+          - text: yang Tak Terulang
+        - paragraph [ref=f3e21]: Pricelist resmi 2026 — dari pre-wedding, engagement, siraman, hingga paket wedding lengkap. Isi paket dan harganya kami tulis apa adanya, tanpa biaya tersembunyi.
+    - generic [ref=f3e23]:
+      - generic [ref=f3e24]:
+        - text: Wedding
+        - heading [level=2] [ref=f3e25]:
+          - text: Paket
+          - emphasis [ref=f3e26]: Wedding
+        - paragraph [ref=f3e28]: Untuk akad, temu keluarga, dan resepsi. Pilih dulu lokasi acaranya — isi paket dan harganya menyesuaikan.
+      - generic [ref=f3e29]:
+        - radio "Wedding Rumah" [checked]
+        - radio "Wedding Gedung"
+        - generic [ref=f3e30]:
+          - generic [ref=f3e31] [cursor=pointer]: Wedding Rumah
+          - generic [ref=f3e32] [cursor=pointer]: Wedding Gedung
+        - generic [ref=f3e33]:
+          - article [ref=f3e34]:
+            - heading "Silver" [level=3] [ref=f3e35]
+            - paragraph [ref=f3e36]: Wedding Rumah
+            - generic [ref=f3e37]:
+              - generic [ref=f3e38]: Rp
+              - generic [ref=f3e39]: 4.500.000
+            - paragraph [ref=f3e40]: AKAD · TEMU · RESEPSI
+            - list [ref=f3e41]:
+              - listitem [ref=f3e42]: Foto unlimited
+              - listitem [ref=f3e43]: Video liputan
+              - listitem [ref=f3e44]: Cetak 110 4R
+              - listitem [ref=f3e45]: Album magnetic
+              - listitem [ref=f3e46]: All file in flasdisk 16GB
+              - listitem [ref=f3e47]: Free cetak 10RS 3 lembar
+            - link "Pilih Paket Silver" [ref=f3e48] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/booking
+          - article [ref=f3e49]:
+            - generic [ref=f3e50]: Paling Diminati
+            - heading "Gold" [level=3] [ref=f3e51]
+            - paragraph [ref=f3e52]: Wedding Rumah
+            - generic [ref=f3e53]:
+              - generic [ref=f3e54]: Rp
+              - generic [ref=f3e55]: 5.000.000
+            - paragraph [ref=f3e56]: AKAD · TEMU · RESEPSI
+            - list [ref=f3e57]:
+              - listitem [ref=f3e58]: Foto unlimited
+              - listitem [ref=f3e59]: Video cinematic
+              - listitem [ref=f3e60]: Album magnetic
+              - listitem [ref=f3e61]: All file in flasdisk 16GB
+              - listitem [ref=f3e62]: Free cetak 10RS 5 lembar
+            - link "Pilih Paket Gold" [ref=f3e63] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/booking
+          - article [ref=f3e64]:
+            - heading "Platinum" [level=3] [ref=f3e65]
+            - paragraph [ref=f3e66]: Wedding Rumah
+            - generic [ref=f3e67]:
+              - generic [ref=f3e68]: Rp
+              - generic [ref=f3e69]: 7.000.000
+            - paragraph [ref=f3e70]: AKAD · TEMU · RESEPSI
+            - list [ref=f3e71]:
+              - listitem [ref=f3e72]: Foto unlimited
+              - listitem [ref=f3e73]: Video cinematic
+              - listitem [ref=f3e74]: Free prewedding outdoor / indoor
+              - listitem [ref=f3e75]: Cetak 120 4R
+              - listitem [ref=f3e76]: Album magnetic jumbo
+              - listitem [ref=f3e77]: Album magazine
+              - listitem [ref=f3e78]: All file in flasdisk 16GB
+              - listitem [ref=f3e79]: Free cetak 10RS 5 lembar
+              - listitem [ref=f3e80]: Free cetak 16RS + frame 1pcs
+            - link "Pilih Paket Platinum" [ref=f3e81] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/booking
+        - paragraph [ref=f3e82]:
+          - text: Harga belum termasuk transportasi. File hanya bertahan 60 hari di Google Drive. Butuh kombinasi lain?
+          - link "Hubungi kami" [ref=f3e83] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/kontak
+          - text: untuk paket custom.
+    - generic [ref=f3e86]:
+      - generic [ref=f3e87]:
+        - generic [ref=f3e88]: "01"
+        - heading "Belum Termasuk Transport" [level=3] [ref=f3e89]
+        - paragraph [ref=f3e90]: Biaya transportasi belum termasuk dan dihitung terpisah sesuai jarak lokasi acara.
+      - generic [ref=f3e91]:
+        - generic [ref=f3e92]: "02"
+        - heading "File Hanya 60 Hari" [level=3] [ref=f3e93]
+        - paragraph [ref=f3e94]: Semua file bertahan 60 hari di Google Drive. Unduh dan simpan sebelum masa berlaku habis.
+      - generic [ref=f3e95]:
+        - generic [ref=f3e96]: "03"
+        - heading "Area Layanan" [level=3] [ref=f3e97]
+        - paragraph [ref=f3e98]: Sidoarjo, Surabaya, dan Mojokerto. Untuk lokasi lain, hubungi kami terlebih dahulu.
+      - generic [ref=f3e99]:
+        - generic [ref=f3e100]: "04"
+        - heading "Pembayaran Aman" [level=3] [ref=f3e101]
+        - paragraph [ref=f3e102]: "DP dibayar lewat Midtrans Snap: transfer bank, e-wallet, kartu kredit, atau QRIS."
+    - generic [ref=f3e104]:
+      - generic [ref=f3e105]:
+        - text: Paket Lainnya
+        - heading [level=2] [ref=f3e106]:
+          - text: Sesi
+          - emphasis [ref=f3e107]: Tersendiri
+        - paragraph [ref=f3e109]: Engagement, pre-wedding, siraman, akad only, hingga wisuda — masing-masing punya paket sendiri dengan isi yang jelas.
+      - generic [ref=f3e110]:
+        - generic [ref=f3e111]:
+          - heading "Engagement" [level=3] [ref=f3e113]
+          - generic [ref=f3e114]:
+            - generic [ref=f3e115]:
+              - generic [ref=f3e116]:
+                - heading "Home Package" [level=4] [ref=f3e117]
+                - paragraph [ref=f3e118]: Rp2.500.000
+              - list [ref=f3e119]:
+                - listitem [ref=f3e120]: 1 fotografer
+                - listitem [ref=f3e121]: 1 videografer
+                - listitem [ref=f3e122]: Cetak 80 4R
+                - listitem [ref=f3e123]: Album magnetic
+                - listitem [ref=f3e124]: Video cinematic 3 menit
+                - listitem [ref=f3e125]: All file in flasdisk 16GB
+              - link "Pesan paket ini" [ref=f3e126] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/booking
+            - generic [ref=f3e127]:
+              - generic [ref=f3e128]:
+                - heading "Gedung Package" [level=4] [ref=f3e129]
+                - paragraph [ref=f3e130]: Rp3.000.000
+              - list [ref=f3e131]:
+                - listitem [ref=f3e132]: 1 fotografer
+                - listitem [ref=f3e133]: 1 videografer
+                - listitem [ref=f3e134]: Cetak 80 4R
+                - listitem [ref=f3e135]: Album magnetic
+                - listitem [ref=f3e136]: Video cinematic 3 menit
+                - listitem [ref=f3e137]: All file in flasdisk 16GB
+              - link "Pesan paket ini" [ref=f3e138] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/booking
+        - generic [ref=f3e139]:
+          - generic [ref=f3e140]:
+            - heading "Prewedding" [level=3] [ref=f3e141]
+            - paragraph [ref=f3e142]: Sidoarjo · Surabaya · Mojokerto
+          - generic [ref=f3e143]:
+            - generic [ref=f3e144]:
+              - generic [ref=f3e145]:
+                - heading "Only Foto — Indoor" [level=4] [ref=f3e146]
+                - paragraph [ref=f3e147]: Rp1.000.000
+              - list [ref=f3e148]:
+                - listitem [ref=f3e149]: 2 fotografer
+                - listitem [ref=f3e150]: 3 hours on duty
+                - listitem [ref=f3e151]: 100 edited file
+                - listitem [ref=f3e152]: All file in google drive
+              - link "Pesan paket ini" [ref=f3e153] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/booking
+            - generic [ref=f3e154]:
+              - generic [ref=f3e155]:
+                - heading "Only Foto — Outdoor" [level=4] [ref=f3e156]
+                - paragraph [ref=f3e157]: Rp1.500.000
+              - list [ref=f3e158]:
+                - listitem [ref=f3e159]: 2 fotografer
+                - listitem [ref=f3e160]: 3 hours on duty
+                - listitem [ref=f3e161]: 100 edited file
+                - listitem [ref=f3e162]: All file in google drive
+              - link "Pesan paket ini" [ref=f3e163] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/booking
+            - generic [ref=f3e164]:
+              - generic [ref=f3e165]:
+                - heading "Indoor" [level=4] [ref=f3e166]
+                - paragraph [ref=f3e167]: Rp1.500.000
+              - list [ref=f3e168]:
+                - listitem [ref=f3e169]: Makeup
+                - listitem [ref=f3e170]: Busana sepasang
+                - listitem [ref=f3e171]: Hijabdo
+                - listitem [ref=f3e172]: Foto unlimited file
+                - listitem [ref=f3e173]: Edit 20 foto
+                - listitem [ref=f3e174]: Studio MJ 2 jam
+              - link "Pesan paket ini" [ref=f3e175] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/booking
+            - generic [ref=f3e176]:
+              - generic [ref=f3e177]:
+                - heading "Outdoor" [level=4] [ref=f3e178]
+                - paragraph [ref=f3e179]: Rp2.500.000
+              - list [ref=f3e180]:
+                - listitem [ref=f3e181]: Makeup
+                - listitem [ref=f3e182]: Busana sepasang
+                - listitem [ref=f3e183]: Hijabdo
+                - listitem [ref=f3e184]: Foto unlimited file
+                - listitem [ref=f3e185]: Edit 20 foto
+              - link "Pesan paket ini" [ref=f3e186] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/booking
+        - generic [ref=f3e187]:
+          - heading "Siraman" [level=3] [ref=f3e189]
+          - generic [ref=f3e190]:
+            - generic [ref=f3e191]:
+              - generic [ref=f3e192]:
+                - heading "Home Package" [level=4] [ref=f3e193]
+                - paragraph [ref=f3e194]: Rp2.600.000
+              - list [ref=f3e195]:
+                - listitem [ref=f3e196]: Foto & video
+                - listitem [ref=f3e197]: Foto unlimited
+                - listitem [ref=f3e198]: Cetak 80 4R
+                - listitem [ref=f3e199]: Album magnetic
+                - listitem [ref=f3e200]: Video cinematic
+                - listitem [ref=f3e201]: All file in flasdisk 16GB
+              - link "Pesan paket ini" [ref=f3e202] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/booking
+            - generic [ref=f3e203]:
+              - generic [ref=f3e204]:
+                - heading "Gedung Package" [level=4] [ref=f3e205]
+                - paragraph [ref=f3e206]: Rp3.100.000
+              - list [ref=f3e207]:
+                - listitem [ref=f3e208]: Foto & video
+                - listitem [ref=f3e209]: Foto unlimited
+                - listitem [ref=f3e210]: Cetak 80 4R
+                - listitem [ref=f3e211]: Album magnetic
+                - listitem [ref=f3e212]: Video cinematic
+                - listitem [ref=f3e213]: All file in flasdisk 16GB
+              - link "Pesan paket ini" [ref=f3e214] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/booking
+        - generic [ref=f3e215]:
+          - heading "Akad Only" [level=3] [ref=f3e217]
+          - generic [ref=f3e218]:
+            - generic [ref=f3e219]:
+              - generic [ref=f3e220]:
+                - heading "Foto & Video" [level=4] [ref=f3e221]
+                - paragraph [ref=f3e222]: Rp3.500.000
+              - list [ref=f3e223]:
+                - listitem [ref=f3e224]: 1 fotografer
+                - listitem [ref=f3e225]: 4 hours on duty
+                - listitem [ref=f3e226]: 100 edited file
+                - listitem [ref=f3e227]: Video cinematic
+                - listitem [ref=f3e228]: Album magnetic
+                - listitem [ref=f3e229]: All file in flasdisk
+                - listitem [ref=f3e230]: Cetak 10RS 2 lembar
+              - link "Pesan paket ini" [ref=f3e231] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/booking
+            - generic [ref=f3e232]:
+              - generic [ref=f3e233]:
+                - heading "Foto Saja" [level=4] [ref=f3e234]
+                - paragraph [ref=f3e235]: Rp1.000.000
+              - list [ref=f3e236]:
+                - listitem [ref=f3e237]: 1 fotografer
+                - listitem [ref=f3e238]: 4 hours on duty
+                - listitem [ref=f3e239]: 100 edited file
+                - listitem [ref=f3e240]: All file in google drive
+              - link "Pesan paket ini" [ref=f3e241] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/booking
+        - generic [ref=f3e242]:
+          - heading "Graduation" [level=3] [ref=f3e244]
+          - generic [ref=f3e245]:
+            - generic [ref=f3e246]:
+              - generic [ref=f3e247]:
+                - heading "Only Photo" [level=4] [ref=f3e248]
+                - paragraph [ref=f3e249]: Rp500.000
+              - list [ref=f3e250]:
+                - listitem [ref=f3e251]: Foto unlimited
+                - listitem [ref=f3e252]: Edit all file
+                - listitem [ref=f3e253]: 3 hours on duty
+              - link "Pesan paket ini" [ref=f3e254] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/booking
+            - generic [ref=f3e255]:
+              - generic [ref=f3e256]:
+                - heading "Photo & Studio" [level=4] [ref=f3e257]
+                - paragraph [ref=f3e258]: Rp800.000
+              - list [ref=f3e259]:
+                - listitem [ref=f3e260]: Foto unlimited
+                - listitem [ref=f3e261]: Edit all file
+                - listitem [ref=f3e262]: 3 hours on duty
+                - listitem [ref=f3e263]: Studio MJ
+              - link "Pesan paket ini" [ref=f3e264] [cursor=pointer]:
+                - /url: http://127.0.0.1:8000/booking
+    - generic [ref=f3e266]:
+      - generic [ref=f3e267]:
+        - text: Pertanyaan Umum
+        - heading [level=2] [ref=f3e268]:
+          - text: Sebelum Anda
+          - emphasis [ref=f3e269]: Memesan
+      - generic [ref=f3e271]:
+        - group [ref=f3e272]:
+          - generic "Bagaimana alur pemesanan paket? +" [ref=f3e273] [cursor=pointer]
+        - group [ref=f3e274]:
+          - generic "Metode pembayaran apa saja yang tersedia? +" [ref=f3e275] [cursor=pointer]
+        - group [ref=f3e276]:
+          - generic "Apakah harga sudah termasuk transportasi? +" [ref=f3e277] [cursor=pointer]
+        - group [ref=f3e278]:
+          - generic "Berapa lama file bisa diakses? +" [ref=f3e279] [cursor=pointer]
+        - group [ref=f3e280]:
+          - generic "Area mana saja yang dilayani? +" [ref=f3e281] [cursor=pointer]
+        - group [ref=f3e282]:
+          - generic "Bisakah paket disesuaikan dengan kebutuhan? +" [ref=f3e283] [cursor=pointer]
+    - generic [ref=f3e284]:
+      - img "Pengantin tertawa bersama di depan lampu gantung — MujaPhotography" [ref=f3e287]
+      - generic [ref=f3e288]:
+        - paragraph [ref=f3e289]: — ✦ —
+        - heading [level=2] [ref=f3e290]:
+          - text: Sudah MenemukanPaket
+          - emphasis [ref=f3e291]: Anda?
+        - paragraph [ref=f3e292]: Amankan tanggal sebelum jadwal penuh. Konsultasi gratis, tanpa komitmen — cukup mulai dari satu percakapan.
+        - generic [ref=f3e293]:
+          - link "Pesan Sekarang" [ref=f3e294] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/booking
+          - link "Hubungi Kami" [ref=f3e295] [cursor=pointer]:
+            - /url: http://127.0.0.1:8000/kontak
+        - paragraph [ref=f3e296]: WhatsApp 0857-0671-7773 · mujaphotographyy@gmail.com
+  - link "Chat via WhatsApp" [ref=f3e297] [cursor=pointer]:
+    - /url: https://wa.me/6281234567890?text=Halo+Muja+Photography+%F0%9F%91%8B%2C+saya+ingin+konsultasi+mengenai+sesi+foto.+Bisa+bantu+saya%3F
+    - generic: Hubungi via WhatsApp
+    - img "WhatsApp"
+  - contentinfo [ref=f3e298]:
+    - generic [ref=f3e299]:
+      - generic [ref=f3e300]:
+        - paragraph [ref=f3e301]: Muja Photography
+        - paragraph [ref=f3e302]: Jasa fotografi profesional untuk wedding, pre-wedding, sesi personal, dan peliputan acara publik di Surabaya.
+      - generic [ref=f3e303]:
+        - paragraph [ref=f3e304]: Navigasi
+        - list [ref=f3e305]:
+          - listitem [ref=f3e306]:
+            - link "Beranda" [ref=f3e307] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000
+          - listitem [ref=f3e308]:
+            - link "Portofolio" [ref=f3e309] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/portofolio
+          - listitem [ref=f3e310]:
+            - link "Paket & Harga" [ref=f3e311] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/paket
+          - listitem [ref=f3e312]:
+            - link "Acara" [ref=f3e313] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/acara
+      - generic [ref=f3e314]:
+        - paragraph [ref=f3e315]: Layanan
+        - list [ref=f3e316]:
+          - listitem [ref=f3e317]:
+            - link "Booking Sesi" [ref=f3e318] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/booking
+          - listitem [ref=f3e319]:
+            - link "Cek Status" [ref=f3e320] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/status
+          - listitem [ref=f3e321]:
+            - link "Kontak" [ref=f3e322] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/kontak
+      - generic [ref=f3e323]:
+        - paragraph [ref=f3e324]: Kontak
+        - list [ref=f3e325]:
+          - listitem [ref=f3e326]:
+            - link "Instagram" [ref=f3e327] [cursor=pointer]:
+              - /url: https://www.instagram.com/muja_photography_/
+          - listitem [ref=f3e328]:
+            - link "WhatsApp" [ref=f3e329] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/kontak
+          - listitem [ref=f3e330]: Surabaya, Indonesia
+    - generic [ref=f3e331]:
+      - paragraph [ref=f3e332]: © 2026 Muja Photography. All rights reserved.
+      - generic [ref=f3e333]:
+        - link "Instagram" [ref=f3e334] [cursor=pointer]:
+          - /url: https://www.instagram.com/muja_photography_/
+        - link "WhatsApp" [ref=f3e335] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/kontak

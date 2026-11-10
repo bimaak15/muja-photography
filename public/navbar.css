@@ -146,20 +146,18 @@ button {
 }
 
 .nav-toggle .hamburger-menu {
-  width: 25px;
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav-toggle .hamburger-menu span {
-  text-align: center;
-  margin-bottom: 0.3rem;
-  background: var(--navbar-black);
-  height: 2px;
-  width: 100%;
+.nav-toggle .hamburger-menu img {
   display: block;
-}
-
-.nav-toggle .hamburger-menu span:last-child {
-  margin-bottom: 0;
+  width: 39px;
+  height: 39px;
+  max-width: none;
 }
 
 .nav-toggle .hamburger-menu-close {
@@ -559,7 +557,7 @@ button {
   }
 
   .nav-toggle {
-    width: 20px;
+    width: 39px;
     margin-right: 16px;
   }
 
@@ -653,10 +651,6 @@ button {
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 0.2rem;
   font-size: 1.4rem;
-}
-
-#site-header .hamburger-menu span {
-  background: #ffffff;
 }
 
 /* -- Nav fullscreen: hitam pekat -- */

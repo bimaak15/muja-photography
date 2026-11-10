@@ -1,0 +1,168 @@
+/* ============================================================
+   MUJA PHOTOGRAPHY — Admin Dashboard Styles (Figma Slicing)
+   Nuansa: Obsidian Black (#0D0D0D / #141414), Gold Accent (#C9A96E / #E5C384),
+   Border subtle (#262626), Muted text (#8E8E93).
+============================================================ */
+
+:root {
+    --admin-bg: #0d0d0d;
+    --admin-sidebar-bg: #0f0f10;
+    --admin-card-bg: #141415;
+    --admin-card-hover: #19191b;
+    --admin-border: #232326;
+    --admin-border-subtle: #1c1c1f;
+    --admin-gold: #c9a96e;
+    --admin-gold-light: #e5c384;
+    --admin-gold-dark: #9a783e;
+    --admin-gold-glow: rgba(201, 169, 110, 0.15);
+    --admin-gold-bg: rgba(201, 169, 110, 0.12);
+    --admin-text-main: #f5f5f7;
+    --admin-text-muted: #8e8e93;
+    --admin-text-dim: #5c5c60;
+    --admin-green: #34c759;
+    --admin-green-bg: rgba(52, 199, 89, 0.12);
+    --admin-yellow: #ffcc00;
+    --admin-yellow-bg: rgba(255, 204, 0, 0.12);
+    --admin-red: #ff453a;
+    --admin-red-bg: rgba(255, 69, 58, 0.12);
+    --admin-blue: #0a84ff;
+    --admin-blue-bg: rgba(10, 132, 255, 0.12);
+}
+
+/* Alpine.js — sembunyikan elemen ber-x-cloak sampai runtime siap dimuat */
+[x-cloak] {
+    display: none !important;
+}
+
+body.admin-body {
+    background-color: var(--admin-bg);
+    color: var(--admin-text-main);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #26262a;
+    border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #36363c;
+}
+
+/* Base Utility Classes */
+.bg-admin-base { background-color: var(--admin-bg); }
+.bg-admin-card { background-color: var(--admin-card-bg); }
+.border-admin { border-color: var(--admin-border); }
+.border-admin-subtle { border-color: var(--admin-border-subtle); }
+.text-admin-gold { color: var(--admin-gold); }
+.text-admin-muted { color: var(--admin-text-muted); }
+.text-admin-dim { color: var(--admin-text-dim); }
+
+/* Buttons */
+.btn-admin-gold {
+    background: linear-gradient(135deg, var(--admin-gold-light), var(--admin-gold));
+    color: #0d0d0d;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    padding: 0.55rem 1.15rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+.btn-admin-gold:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px var(--admin-gold-glow);
+}
+
+.btn-admin-ghost {
+    background: transparent;
+    color: var(--admin-text-muted);
+    font-size: 0.8125rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--admin-border);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.btn-admin-ghost:hover {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--admin-text-main);
+    border-color: #38383e;
+}
+
+/* Inputs */
+.admin-input {
+    background-color: #171719;
+    border: 1px solid var(--admin-border);
+    color: var(--admin-text-main);
+    font-size: 0.84rem;
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.85rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+}
+.admin-input:focus {
+    outline: none;
+    border-color: var(--admin-gold);
+    box-shadow: 0 0 0 2px var(--admin-gold-glow);
+}
+.admin-input::placeholder {
+    color: var(--admin-text-dim);
+}
+
+/* Status Badges */
+.badge-confirmed {
+    background-color: var(--admin-green-bg);
+    color: var(--admin-green);
+    border: 1px solid rgba(52, 199, 89, 0.25);
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+.badge-pending {
+    background-color: var(--admin-yellow-bg);
+    color: var(--admin-yellow);
+    border: 1px solid rgba(255, 204, 0, 0.25);
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+.badge-cancelled {
+    background-color: var(--admin-red-bg);
+    color: var(--admin-red);
+    border: 1px solid rgba(255, 69, 58, 0.25);
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+.badge-gold {
+    background-color: var(--admin-gold-bg);
+    color: var(--admin-gold);
+    border: 1px solid rgba(201, 169, 110, 0.25);
+    padding: 0.2rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+

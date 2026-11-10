@@ -61,11 +61,11 @@ if (nav && menuOpenBtn && menuCloseBtn) {
       opacity: 1,
       ease: 'expo.inOut'
     })
-    .to('.hamburger-menu span', {
+    .to('.hamburger-menu img', {
       duration: 0.5,
       delay: -0.9,
       scaleX: 0,
-      transformOrigin: '50% 0%',
+      transformOrigin: '50% 50%',
       ease: 'expo.inOut'
     })
 
@@ -110,7 +110,7 @@ if (nav && menuOpenBtn && menuCloseBtn) {
       menuOpened = false
       menuTl.pause(0)
       gsap.set('.nav-columns', { y: 60, opacity: 0 })
-      gsap.set('.hamburger-menu span', { scaleX: 1, transformOrigin: '50% 0%' })
+      gsap.set('.hamburger-menu img', { scaleX: 1, transformOrigin: '50% 50%' })
       gsap.set('.hamburger-menu-close', { display: 'none' })
       gsap.set('body', { overflow: 'auto' })
       gsap.set(nav, { display: 'none' })
