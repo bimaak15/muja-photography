@@ -303,23 +303,34 @@
         <div class="content content--full content--padded">
             {{-- data-grid-first: 17 positioned images, fly in from below on scroll pin --}}
             <div class="grid grid--spaced" data-grid-first>
-                <div class="grid__img pos-1"  style="background-image:url('{{ asset('img/hero/mjp_2866.webp') }}')"></div>
-                <div class="grid__img pos-2"  style="background-image:url('{{ asset('img/hero/mjp_2599.webp') }}')"></div>
-                <div class="grid__img pos-3"  style="background-image:url('{{ asset('img/hero/mjp_2862.webp') }}')"></div>
-                <div class="grid__img pos-4"  style="background-image:url('{{ asset('img/hero/mjp_2682.webp') }}')"></div>
-                <div class="grid__img pos-5"  style="background-image:url('{{ asset('img/hero/mjp_2614.webp') }}')"></div>
-                <div class="grid__img pos-6"  style="background-image:url('{{ asset('img/hero/mjp_2609.webp') }}')"></div>
-                <div class="grid__img pos-7"  style="background-image:url('{{ asset('img/hero/mjp_2866.webp') }}')"></div>
-                <div class="grid__img pos-8"  style="background-image:url('{{ asset('img/hero/mjp_2599.webp') }}')"></div>
-                <div class="grid__img pos-9"  style="background-image:url('{{ asset('img/hero/mjp_2862.webp') }}')"></div>
-                <div class="grid__img pos-10" style="background-image:url('{{ asset('img/hero/mjp_2682.webp') }}')"></div>
-                <div class="grid__img pos-11" style="background-image:url('{{ asset('img/hero/mjp_2614.webp') }}')"></div>
-                <div class="grid__img pos-12" style="background-image:url('{{ asset('img/hero/mjp_2609.webp') }}')"></div>
-                <div class="grid__img pos-13" style="background-image:url('{{ asset('img/hero/mjp_2866.webp') }}')"></div>
-                <div class="grid__img pos-14" style="background-image:url('{{ asset('img/hero/mjp_2599.webp') }}')"></div>
-                <div class="grid__img pos-15" style="background-image:url('{{ asset('img/hero/mjp_2862.webp') }}')"></div>
-                <div class="grid__img pos-16" style="background-image:url('{{ asset('img/hero/mjp_2682.webp') }}')"></div>
-                <div class="grid__img pos-17" style="background-image:url('{{ asset('img/hero/mjp_2614.webp') }}')"></div>
+                @php
+                    $defaultFallbacks = [
+                        1 => 'img/hero/mjp_2866.webp',
+                        2 => 'img/hero/mjp_2599.webp',
+                        3 => 'img/hero/mjp_2862.webp',
+                        4 => 'img/hero/mjp_2682.webp',
+                        5 => 'img/hero/mjp_2614.webp',
+                        6 => 'img/hero/mjp_2609.webp',
+                        7 => 'img/hero/mjp_2866.webp',
+                        8 => 'img/hero/mjp_2599.webp',
+                        9 => 'img/hero/mjp_2862.webp',
+                        10 => 'img/hero/mjp_2682.webp',
+                        11 => 'img/hero/mjp_2614.webp',
+                        12 => 'img/hero/mjp_2609.webp',
+                        13 => 'img/hero/mjp_2866.webp',
+                        14 => 'img/hero/mjp_2599.webp',
+                        15 => 'img/hero/mjp_2862.webp',
+                        16 => 'img/hero/mjp_2682.webp',
+                        17 => 'img/hero/mjp_2614.webp',
+                    ];
+                @endphp
+                @for ($i = 1; $i <= 17; $i++)
+                    @php
+                        $item = isset($galleryItems) ? $galleryItems->get($i) : null;
+                        $imgUrl = ($item && $item->is_active) ? $item->image_url : asset($defaultFallbacks[$i] ?? 'img/hero/mjp_2866.webp');
+                    @endphp
+                    <div class="grid__img pos-{{ $i }}" style="background-image:url('{{ $imgUrl }}')"></div>
+                @endfor
             </div>
             {{-- Overlaid title, fades in after grid settles --}}
             <div class="content__title">

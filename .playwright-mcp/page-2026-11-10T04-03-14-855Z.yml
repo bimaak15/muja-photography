@@ -1,0 +1,187 @@
+- generic [ref=f1e2]:
+  - banner [ref=f1e3]:
+    - generic [ref=f1e5]:
+      - link [ref=f1e7] [cursor=pointer]:
+        - /url: http://127.0.0.1:8000
+        - img "Muja Photography Logo" [ref=f1e8]
+      - button "Buka menu" [ref=f1e10] [cursor=pointer]
+  - main [ref=f1e11]:
+    - generic [ref=f1e12]:
+      - img "Pengantin bersanding di pelaminan bertema galaksi — MujaPhotography" [ref=f1e15]
+      - img "Pengantin berjabat tangan di bawah lampu gantung kristal — MujaPhotography" [ref=f1e18]
+      - img "Pasangan pengantin membelakangi backdrop galaksi berhuruf RR — MujaPhotography" [ref=f1e21]
+      - img "Pengantin tertawa di depan lampu gantung besar — MujaPhotography" [ref=f1e24]
+      - img "Pengantin bersalaman di antara tirai merah dan lampu gantung — MujaPhotography" [ref=f1e27]
+      - img "Pengantin mengenakan busana ivory tersenyum di depan pelaminan — MujaPhotography" [ref=f1e30]
+    - generic [ref=f1e31]:
+      - generic [ref=f1e32]:
+        - heading "Abadikan Momen" [level=1] [ref=f1e33]
+        - heading "Terbaik Hidupmu" [level=2] [ref=f1e35]
+        - heading "Bersama Muja" [level=2] [ref=f1e37]
+      - heading "klik di mana saja untuk melanjutkan" [level=2] [ref=f1e40]
+    - generic [ref=f1e43]:
+      - img "Pengantin bersanding di pelaminan bertema galaksi — MujaPhotography" [ref=f1e44]
+      - generic [ref=f1e46]:
+        - text: — ✦—
+        - paragraph [ref=f1e47]: Dari momen sakral pernikahan hingga peliputan aksi komunitas — setiap jepretan kami merekam cerita yang nyata.
+        - paragraph [ref=f1e48]: Satu platform untuk portofolio, pemesanan sesi, dan distribusi foto acara.
+    - generic [ref=f1e50]:
+      - img "Pengantin berjabat tangan di bawah lampu gantung kristal — MujaPhotography" [ref=f1e51]
+      - generic [ref=f1e53]:
+        - text: — ✦—
+        - paragraph [ref=f1e54]: Booking sesi privat langsung dari kalender. Tidak perlu chat, tidak ada risiko jadwal bentrok.
+    - generic [ref=f1e56]:
+      - img "Pasangan pengantin membelakangi backdrop galaksi berhuruf RR — MujaPhotography" [ref=f1e57]
+      - generic [ref=f1e59]:
+        - text: — ✦—
+        - paragraph [ref=f1e60]: Peserta acara publik dapat menemukan foto mereka sendiri hanya dengan memfilter rentang jam melintas.
+        - paragraph [ref=f1e61]: Preview tersedia gratis ber-watermark. Foto resolusi tinggi (HD) tersedia untuk dibeli.
+    - generic [ref=f1e63]:
+      - img "Pengantin tertawa di depan lampu gantung besar — MujaPhotography" [ref=f1e64]
+      - generic [ref=f1e66]:
+        - text: — ✦—
+        - paragraph [ref=f1e67]: Pantau progres pesananmu kapan saja menggunakan kode unik yang kamu terima saat booking.
+        - paragraph [ref=f1e68]: Tidak perlu menunggu balasan chat — status pesanan selalu terbaru.
+    - generic [ref=f1e70]:
+      - img "Pengantin bersalaman di antara tirai merah dan lampu gantung — MujaPhotography" [ref=f1e71]
+      - generic [ref=f1e73]:
+        - text: — ✦—
+        - paragraph [ref=f1e74]: Kami meliput sunmori dan ride komunitas dari titik kumpul sampai garis finish.
+        - paragraph [ref=f1e75]: Setiap acara terbit sebagai galeri per album, siap dibuka lewat ponsel peserta.
+    - generic [ref=f1e77]:
+      - img "Pengantin mengenakan busana ivory tersenyum di depan pelaminan — MujaPhotography" [ref=f1e78]
+      - generic [ref=f1e80]:
+        - text: — ✦—
+        - paragraph [ref=f1e81]: Sudah siap mengabadikan momen terbaikmu?
+        - paragraph [ref=f1e82]: Pilih paket, tentukan tanggal di kalender, dan amankan slot sesimu sekarang.
+  - generic [ref=f1e85]:
+    - img "Pengantin mengenakan busana ivory tersenyum di depan pelaminan — MujaPhotography" [ref=f1e88]
+    - generic [ref=f1e89]:
+      - text: Tentang Kami
+      - heading [level=2] [ref=f1e90]:
+        - text: Setiap MomenPunya
+        - emphasis [ref=f1e91]: Cerita
+      - paragraph [ref=f1e93]: Muja Photography hadir untuk merekam hari-hari yang tak akan terulang. Kami percaya bahwa fotografi bukan sekadar gambar — melainkan cara paling jujur untuk menyimpan perasaan.
+      - paragraph [ref=f1e94]: Dari pernikahan intim hingga perayaan besar, kami menjaga setiap detail, emosi, dan tatapan agar tetap hidup dalam setiap frame.
+      - paragraph [ref=f1e95]: — Muja Photography, Surabaya
+  - generic [ref=f1e96]:
+    - generic [ref=f1e97]:
+      - text: Portofolio
+      - heading [level=2] [ref=f1e98]:
+        - text: Karya
+        - emphasis [ref=f1e99]: Terbaru
+        - text: Kami
+    - link "Lihat Semua Karya" [ref=f1e105] [cursor=pointer]:
+      - /url: http://127.0.0.1:8000/portofolio
+  - generic [ref=f1e107]:
+    - generic [ref=f1e108]:
+      - text: Layanan
+      - heading [level=2] [ref=f1e109]:
+        - text: Apa yang Kami
+        - emphasis [ref=f1e110]: Tawarkan
+    - generic [ref=f1e112]:
+      - generic [ref=f1e113]:
+        - generic [ref=f1e114]: "01"
+        - heading "Wedding Photography" [level=3] [ref=f1e115]
+        - paragraph [ref=f1e116]: Dokumentasi lengkap hari pernikahan Anda — dari persiapan, akad, resepsi, hingga sesi foto keluarga. Dua fotografer, satu hari penuh.
+      - generic [ref=f1e117]:
+        - generic [ref=f1e118]: "02"
+        - heading "Pre-Wedding" [level=3] [ref=f1e119]
+        - paragraph [ref=f1e120]: Sesi foto pasangan sebelum hari besar. Indoor atau outdoor, konsep sesuai keinginan Anda, dengan arahan pose yang natural.
+      - generic [ref=f1e121]:
+        - generic [ref=f1e122]: "03"
+        - heading "Peliputan Acara" [level=3] [ref=f1e123]
+        - paragraph [ref=f1e124]: Sunmori, gathering komunitas, atau acara perusahaan — kami hadir dengan galeri online agar peserta bisa menemukan foto mereka sendiri.
+  - generic [ref=f1e126]:
+    - generic [ref=f1e127]:
+      - text: Cara Kerja
+      - heading [level=2] [ref=f1e128]:
+        - text: Empat Langkah
+        - emphasis [ref=f1e129]: Sederhana
+    - generic [ref=f1e131]:
+      - generic [ref=f1e132]:
+        - generic [ref=f1e133]: "1"
+        - heading "Pilih Paket" [level=3] [ref=f1e134]
+        - paragraph [ref=f1e135]: Telusuri paket yang sesuai kebutuhan dan anggaran Anda.
+      - generic [ref=f1e136]:
+        - generic [ref=f1e137]: "2"
+        - heading "Tentukan Tanggal" [level=3] [ref=f1e138]
+        - paragraph [ref=f1e139]: Cek ketersediaan kalender dan pilih tanggal yang Anda inginkan.
+      - generic [ref=f1e140]:
+        - generic [ref=f1e141]: "3"
+        - heading "Konfirmasi Booking" [level=3] [ref=f1e142]
+        - paragraph [ref=f1e143]: Selesaikan pemesanan dan terima kode unik untuk melacak progres.
+      - generic [ref=f1e144]:
+        - generic [ref=f1e145]: "4"
+        - heading "Terima Hasil" [level=3] [ref=f1e146]
+        - paragraph [ref=f1e147]: Foto diedit profesional dan dikirim dalam galeri online pribadi Anda.
+  - generic [ref=f1e150]:
+    - blockquote [ref=f1e152]: “ Foto-fotonya bukan sekadar dokumentasi. Mereka berhasil menangkap perasaan yang bahkan kami sendiri tidak sadar sedang kami rasakan di hari itu.
+    - paragraph [ref=f1e153]: Risky & Rahma — Surabaya, 2024
+  - generic [ref=f1e154]:
+    - img "Background — pelaminan bertema galaksi" [ref=f1e157]
+    - generic [ref=f1e158]:
+      - paragraph [ref=f1e159]: — ✦ —
+      - heading [level=2] [ref=f1e160]:
+        - text: Siap MengabadikanMomen
+        - emphasis [ref=f1e161]: Terbaik
+        - text: Anda?
+      - paragraph [ref=f1e162]: Amankan tanggal Anda sebelum jadwal penuh. Konsultasi gratis, tanpa komitmen — cukup mulai dari satu percakapan.
+      - generic [ref=f1e163]:
+        - link "Pesan Sekarang" [ref=f1e164] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/booking
+        - link "Hubungi Kami" [ref=f1e165] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/kontak
+  - link "Chat via WhatsApp" [ref=f1e166] [cursor=pointer]:
+    - /url: https://wa.me/6281234567890?text=Halo+Muja+Photography+%F0%9F%91%8B%2C+saya+ingin+konsultasi+mengenai+sesi+foto.+Bisa+bantu+saya%3F
+    - generic: Hubungi via WhatsApp
+    - img "WhatsApp"
+  - contentinfo [ref=f1e167]:
+    - generic [ref=f1e168]:
+      - generic [ref=f1e169]:
+        - paragraph [ref=f1e170]: Muja Photography
+        - paragraph [ref=f1e171]: Jasa fotografi profesional untuk wedding, pre-wedding, sesi personal, dan peliputan acara publik di Surabaya.
+      - generic [ref=f1e172]:
+        - paragraph [ref=f1e173]: Navigasi
+        - list [ref=f1e174]:
+          - listitem [ref=f1e175]:
+            - link "Beranda" [ref=f1e176] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000
+          - listitem [ref=f1e177]:
+            - link "Portofolio" [ref=f1e178] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/portofolio
+          - listitem [ref=f1e179]:
+            - link "Paket & Harga" [ref=f1e180] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/paket
+          - listitem [ref=f1e181]:
+            - link "Acara" [ref=f1e182] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/acara
+      - generic [ref=f1e183]:
+        - paragraph [ref=f1e184]: Layanan
+        - list [ref=f1e185]:
+          - listitem [ref=f1e186]:
+            - link "Booking Sesi" [ref=f1e187] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/booking
+          - listitem [ref=f1e188]:
+            - link "Cek Status" [ref=f1e189] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/status
+          - listitem [ref=f1e190]:
+            - link "Kontak" [ref=f1e191] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/kontak
+      - generic [ref=f1e192]:
+        - paragraph [ref=f1e193]: Kontak
+        - list [ref=f1e194]:
+          - listitem [ref=f1e195]:
+            - link "Instagram" [ref=f1e196] [cursor=pointer]:
+              - /url: https://www.instagram.com/muja_photography_/
+          - listitem [ref=f1e197]:
+            - link "WhatsApp" [ref=f1e198] [cursor=pointer]:
+              - /url: http://127.0.0.1:8000/kontak
+          - listitem [ref=f1e199]: Surabaya, Indonesia
+    - generic [ref=f1e200]:
+      - paragraph [ref=f1e201]: © 2026 Muja Photography. All rights reserved.
+      - generic [ref=f1e202]:
+        - link "Instagram" [ref=f1e203] [cursor=pointer]:
+          - /url: https://www.instagram.com/muja_photography_/
+        - link "WhatsApp" [ref=f1e204] [cursor=pointer]:
+          - /url: http://127.0.0.1:8000/kontak

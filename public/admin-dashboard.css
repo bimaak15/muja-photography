@@ -29,6 +29,11 @@
     --admin-blue-bg: rgba(10, 132, 255, 0.12);
 }
 
+/* Alpine.js — sembunyikan elemen ber-x-cloak sampai runtime siap dimuat */
+[x-cloak] {
+    display: none !important;
+}
+
 body.admin-body {
     background-color: var(--admin-bg);
     color: var(--admin-text-main);

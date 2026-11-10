@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -100,6 +101,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
         return view('admin.customer');
     })->name('customer');
 
+    /** Gallery & Portofolio Beranda — /admin/gallery */
+    Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
+    Route::post('/gallery/reset-all', [GalleryController::class, 'resetAll'])->name('gallery.reset-all');
+    Route::post('/gallery/{galleryItem}', [GalleryController::class, 'update'])->name('gallery.update');
+    Route::post('/gallery/{galleryItem}/reset', [GalleryController::class, 'reset'])->name('gallery.reset');
+
     /** Settings / Pengaturan Studio, Akun & Pembayaran — /admin/settings */
     Route::get('/settings', function () {
         return view('admin.settings');
@@ -111,7 +118,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     })->name('kalender');
 
     Route::get('/portofolio', function () {
-        return redirect()->route('admin.packages');
+        return redirect()->route('admin.gallery');
     })->name('portofolio');
 
     Route::get('/album', function () {

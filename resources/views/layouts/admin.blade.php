@@ -14,6 +14,9 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- Alpine.js — dipakai modal edit galeri, tab settings, dll. -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <!-- Tailwind CSS (via Vite) & Custom Admin CSS -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="{{ asset('admin-dashboard.css') }}">
@@ -86,6 +89,16 @@
                          : 'text-admin-muted hover:text-white hover:bg-white/[0.04]' }}">
                 <i data-lucide="users" class="w-4 h-4 {{ str_starts_with($currentRoute, 'admin.customer') ? 'text-admin-gold' : 'text-admin-muted' }}"></i>
                 <span>Customer</span>
+            </a>
+
+            <!-- Gallery -->
+            <a href="{{ route('admin.gallery') }}"
+               class="flex items-center gap-3.5 px-3.5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200
+                      {{ str_starts_with($currentRoute, 'admin.gallery') || str_starts_with($currentRoute, 'admin.portofolio')
+                         ? 'bg-[#c9a96e]/15 text-admin-gold border-l-2 border-admin-gold'
+                         : 'text-admin-muted hover:text-white hover:bg-white/[0.04]' }}">
+                <i data-lucide="image" class="w-4 h-4 {{ str_starts_with($currentRoute, 'admin.gallery') ? 'text-admin-gold' : 'text-admin-muted' }}"></i>
+                <span>Gallery</span>
             </a>
 
             <!-- Settings -->
@@ -193,6 +206,10 @@
         <a href="{{ route('admin.customer') }}" class="flex flex-col items-center py-1 {{ str_starts_with($currentRoute, 'admin.customer') ? 'text-admin-gold' : 'text-admin-dim' }}">
             <i data-lucide="users" class="w-5 h-5"></i>
             <span class="text-[0.62rem] mt-0.5">Customer</span>
+        </a>
+        <a href="{{ route('admin.gallery') }}" class="flex flex-col items-center py-1 {{ str_starts_with($currentRoute, 'admin.gallery') ? 'text-admin-gold' : 'text-admin-dim' }}">
+            <i data-lucide="image" class="w-5 h-5"></i>
+            <span class="text-[0.62rem] mt-0.5">Gallery</span>
         </a>
         <a href="{{ route('admin.settings') }}" class="flex flex-col items-center py-1 {{ str_starts_with($currentRoute, 'admin.settings') ? 'text-admin-gold' : 'text-admin-dim' }}">
             <i data-lucide="settings" class="w-5 h-5"></i>
