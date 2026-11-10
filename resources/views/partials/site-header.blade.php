@@ -39,13 +39,14 @@
     <div class="container">
         <div class="nav-columns">
             <div class="nav-column">
-                <div class="nav-label">Menu</div>
+                <div class="nav-label">Menu Eksplorasi</div>
                 <ul class="nav-links">
-                    <li><a href="{{ route('home') }}">Beranda</a></li>
-                    <li><a href="{{ route('paket') }}">Paket &amp; Harga</a></li>
-                    <li><a href="{{ route('acara.index') }}">Acara</a></li>
-                    <li><a href="{{ route('kontak') }}">Kontak</a></li>
-                    <li><a href="{{ route('booking') }}">Booking Sekarang</a></li>
+                    <li><a href="{{ route('home') }}"><span class="nav-num">01</span> Beranda</a></li>
+                    <li><a href="{{ route('portofolio') }}"><span class="nav-num">02</span> Portofolio</a></li>
+                    <li><a href="{{ route('paket') }}"><span class="nav-num">03</span> Paket &amp; Harga</a></li>
+                    <li><a href="{{ route('acara.index') }}"><span class="nav-num">04</span> Galeri Acara</a></li>
+                    <li><a href="{{ route('status') }}"><span class="nav-num">05</span> Lacak Pesanan</a></li>
+                    <li><a href="{{ route('kontak') }}"><span class="nav-num">06</span> Kontak &amp; FAQ</a></li>
                 </ul>
             </div>
             <div class="nav-column">

@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="{{ asset('gallery-custom.css') }}">
 
         {{-- Navbar CSS dari library/navbar --}}
-        <link rel="stylesheet" href="{{ asset('navbar.css') }}">
+        <link rel="stylesheet" href="{{ asset('navbar.css') }}?v={{ time() }}">
 
         {{-- Vite (Tailwind + app.css) --}}
         @vite(['resources/css/app.css', 'resources/js/app.js'])

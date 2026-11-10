@@ -32,7 +32,7 @@
             <ul class="footer-links">
                 <li><a href="https://www.instagram.com/muja_photography_/" target="_blank" rel="noopener">Instagram</a></li>
                 <li><a href="{{ route('kontak') }}">WhatsApp</a></li>
-                <li>Surabaya, Indonesia</li>
+                <li><span id="sby">Surabaya</span>, Indonesia</li>
             </ul>
         </div>
     </div>

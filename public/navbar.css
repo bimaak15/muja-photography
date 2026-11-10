@@ -685,28 +685,59 @@ button {
 /* -- Label section -- */
 #site-nav .nav-label {
   font-family: 'Inter', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 400;
+  font-size: 0.72rem;
+  font-weight: 500;
   letter-spacing: 0.25rem;
   text-transform: uppercase;
-  color: var(--nb-label-color);
-  margin-bottom: 2.5rem;
+  color: #c9a96e;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-/* -- Nav links: Bebas Neue besar -- */
+#site-nav .nav-label::before {
+  content: "✦";
+  font-size: 0.75rem;
+  color: #c9a96e;
+}
+
+/* -- Nav links: Aesthetic Vintage Atelier Typography -- */
+#site-nav .nav-links li {
+  margin-bottom: 1.25rem;
+}
+
 #site-nav .nav-links li a {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 4.5rem;
-  letter-spacing: 0.08rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.02rem;
   color: var(--nb-text-nav);
-  line-height: 1;
-  transition: opacity 0.25s ease;
-  text-transform: uppercase;
+  line-height: 1.35;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.65rem;
+}
+
+#site-nav .nav-links li a .nav-num {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 500;
+  color: #c9a96e;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+  display: inline-block;
+  min-width: 1.8rem;
 }
 
 #site-nav .nav-links li a:hover {
-  opacity: 0.4;
-  color: var(--nb-text-nav);
+  opacity: 1;
+  color: #c9a96e;
+  transform: translateX(8px);
 }
 
 /* Reset underline dari library asli */
@@ -718,34 +749,41 @@ button {
 }
 
 /* -- BOOKING SEKARANG � tombol istimewa -- */
+/* -- RESERVASI JADWAL — tombol istimewa -- */
+#site-nav .nav-links li.nav-booking {
+  margin-top: 1.5rem;
+}
+
 #site-nav .nav-links li.nav-booking a {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.15rem;
-  letter-spacing: 0.2rem;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.12rem;
   text-transform: uppercase;
-  background: var(--nb-booking-bg);
-  color: var(--nb-booking-text);
-  padding: 0.85rem 2rem;
-  border-radius: 100px;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.25s ease;
-  margin-top: 0.75rem;
+  background: #c9a96e;
+  color: #0e0d0b;
+  padding: 0.85rem 1.85rem;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
 }
 
-#site-nav .nav-links li.nav-booking a::before {
-  content: "?";
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  line-height: 1;
+#site-nav .nav-links li.nav-booking a .nav-num {
+  color: #0e0d0b;
+  min-width: auto;
+  font-size: 0.9rem;
 }
 
 #site-nav .nav-links li.nav-booking a:hover {
-  background: rgba(255,255,255,0.85);
-  color: #000000;
+  background: #dfc28a;
+  color: #0c0a09;
   opacity: 1;
-  transform: translateX(6px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 169, 110, 0.45);
 }
 
 /* -- Info kolom kanan: Inter -- */
@@ -784,16 +822,17 @@ button {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   #site-nav .nav-links li a {
-    font-size: 3rem;
+    font-size: 1.55rem;
+    margin-bottom: 0.5rem;
   }
 
   #site-nav .nav-links li.nav-booking a {
-    font-size: 1rem;
-    padding: 0.7rem 1.5rem;
+    font-size: 0.85rem;
+    padding: 0.65rem 1.4rem;
   }
 }
 
@@ -803,6 +842,7 @@ button {
   }
 
   #site-nav .nav-links li a {
-    font-size: 2.4rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.45rem;
   }
 }

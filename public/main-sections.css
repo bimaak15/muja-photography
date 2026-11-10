@@ -500,12 +500,25 @@
     background: linear-gradient(135deg, #c9a96e, #e8d5b0);
     padding: 1rem 2.8rem;
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(201, 169, 110, 0.25);
+    border-radius: 8px;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                filter 0.2s ease;
 }
 
 .btn-gold:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(201, 169, 110, 0.25);
+    box-shadow: 0 10px 35px rgba(201, 169, 110, 0.35);
+}
+
+.btn-gold:active {
+    transform: translateY(1px);
+    filter: brightness(0.94);
+    box-shadow: 0 4px 18px rgba(201, 169, 110, 0.3);
 }
 
 .btn-outline-gold {
@@ -582,6 +595,12 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-style: italic;
+}
+#sby {
+    color: #fcd9a8;
+    font-size: 1.4rem;
 }
 
 .footer-links li {

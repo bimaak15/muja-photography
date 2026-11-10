@@ -1,0 +1,2160 @@
+/* ============================================================
+   MUJA PHOTOGRAPHY — Inner Pages Styling (pages.css)
+   Aesthetic: Warm dark (#0c0a09), Luxury Cream (#f5f0ea), Gold Accent (#c9a96e, #e8d5b0)
+   Typography: Cormorant Garamond (Serif), Inter / Modern Sans (Form & Body), Bebas Neue (Display)
+============================================================ */
+
+/* --- Page Hero Banner --- */
+.page-hero {
+    position: relative;
+    padding: clamp(8rem, 16vh, 11rem) clamp(1.5rem, 5vw, 4rem) clamp(3.5rem, 8vh, 5.5rem);
+    text-align: center;
+    background-color: #0c0a09;
+    overflow: hidden;
+}
+
+.page-hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.page-hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.7) brightness(0.35);
+    transform: scale(1.04);
+}
+
+.page-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to bottom,
+        rgba(8, 7, 6, 0.88) 0%,
+        rgba(8, 7, 6, 0.45) 40%,
+        rgba(8, 7, 6, 0.7) 75%,
+        #0c0a09 100%
+    );
+    pointer-events: none;
+}
+
+.page-hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.page-hero__ornament {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.35em;
+    color: rgba(201, 169, 110, 0.75);
+    margin-bottom: 1.25rem;
+}
+
+.page-hero__title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: #f7f2ea;
+    margin-bottom: 1.25rem;
+}
+
+.page-hero__title em {
+    font-style: italic;
+    color: #e8d5b0;
+}
+
+.page-hero__sub {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: clamp(0.9rem, 1.05vw, 1.05rem);
+    font-weight: 300;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.65);
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+/* Breadcrumbs */
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 1.25rem;
+}
+
+.breadcrumb-nav a {
+    color: #c9a96e;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-nav a:hover {
+    color: #e8d5b0;
+}
+
+.breadcrumb-nav span {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+/* --- Category Filter Tabs --- */
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 3rem;
+}
+
+.filter-tab {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.65rem 1.4rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-tab:hover {
+    color: #f7f2ea;
+    border-color: rgba(201, 169, 110, 0.4);
+    background: rgba(201, 169, 110, 0.08);
+}
+
+.filter-tab.active {
+    color: #0c0a09;
+    background: linear-gradient(135deg, #c9a96e, #e8d5b0);
+    border-color: #c9a96e;
+    font-weight: 600;
+    box-shadow: 0 4px 20px rgba(201, 169, 110, 0.25);
+}
+
+/* --- Portfolio Gallery Grid --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.75rem;
+}
+
+.portfolio-card {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #14110f;
+    aspect-ratio: 4/5;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    border-color: rgba(201, 169, 110, 0.3);
+}
+
+.portfolio-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.portfolio-card:hover .portfolio-card__img {
+    transform: scale(1.06);
+}
+
+.portfolio-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(12, 10, 9, 0.95) 0%, rgba(12, 10, 9, 0.3) 50%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.75rem;
+    opacity: 0.92;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-card__cat {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #c9a96e;
+    margin-bottom: 0.4rem;
+}
+
+.portfolio-card__title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #fff;
+    margin-bottom: 0.35rem;
+}
+
+.portfolio-card__loc {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(8, 7, 6, 0.96);
+    backdrop-filter: blur(8px);
+    display: none;
+    place-items: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-modal.active {
+    display: grid;
+    opacity: 1;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 72vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-caption {
+    margin-top: 1.25rem;
+    text-align: center;
+    color: #fff;
+}
+
+.lightbox-caption h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #f7f2ea;
+    margin-bottom: 0.25rem;
+}
+
+.lightbox-caption p {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.8rem;
+    color: #c9a96e;
+    letter-spacing: 0.1em;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -3rem;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.lightbox-close:hover {
+    color: #c9a96e;
+}
+
+/* --- Form & Input Elements (Refined, Formal, Ultra-Legible) --- */
+.muja-form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.muja-label {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #e6dfd5;
+    margin-bottom: 0.55rem;
+}
+
+.muja-label-req {
+    color: #c9a96e;
+    margin-left: 0.25rem;
+}
+
+.muja-input,
+.muja-select,
+.muja-textarea {
+    width: 100%;
+    background: #151210;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 5px;
+    padding: 0.88rem 1.15rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.92rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #f7f2ea;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    box-sizing: border-box;
+}
+
+.muja-input:focus,
+.muja-select:focus,
+.muja-textarea:focus {
+    background: #1a1614;
+    border-color: #c9a96e;
+    box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.18);
+}
+
+.muja-input::placeholder,
+.muja-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+    font-weight: 300;
+}
+
+.muja-select option {
+    background: #14110f;
+    color: #f7f2ea;
+    padding: 0.5rem;
+}
+
+/* --- Booking Flow: Smooth Sliding Layout --- */
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 2.75rem;
+    align-items: start;
+}
+
+@media (max-width: 64rem) {
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Slide Wrapper & Track (Silky Smooth Carousel) */
+.booking-slide-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 8px;
+    background: #14110f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- Booking Slide Track & Ultra-Smooth Transitions --- */
+.booking-slide-track {
+    display: flex;
+    width: 300%;
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+}
+
+.booking-slide {
+    width: 33.333333%;
+    min-width: 33.333333%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+
+.booking-panel-title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.85rem;
+    font-weight: 400;
+    color: #f7f2ea;
+    margin-bottom: 0.35rem;
+}
+
+.booking-panel-sub {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.84rem;
+    color: rgba(255, 255, 255, 0.58);
+    margin-bottom: 1.75rem;
+    line-height: 1.6;
+}
+
+/* Header bar with step indicator & circular < > buttons */
+.slide-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    gap: 1rem;
+}
+
+.slide-arrows-pair {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Circular < and > Buttons (Calm, Elegant Luxury Style) */
+.slide-arrows-pair {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.slide-arrow-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #151210;
+    border: 1px solid rgba(201, 169, 110, 0.35);
+    color: #f7f2ea;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.22s ease, 
+                box-shadow 0.22s ease, 
+                background-color 0.22s ease, 
+                border-color 0.22s ease;
+    outline: none;
+    user-select: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slide-arrow-btn svg {
+    display: block;
+    transition: stroke 0.2s ease, transform 0.2s ease;
+    stroke: #d8d0c2;
+}
+
+.slide-arrow-btn:hover:not(:disabled) {
+    background: #1c1815;
+    border-color: rgba(201, 169, 110, 0.7);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), 0 0 12px rgba(201, 169, 110, 0.2);
+}
+
+.slide-arrow-btn:hover:not(:disabled) svg {
+    stroke: #f7f2ea;
+}
+
+/* Calm, Refined, Aesthetic Feedback when Pressed */
+.slide-arrow-btn:active:not(:disabled),
+.slide-arrow-btn.glow-pulse:not(:disabled) {
+    transform: scale(0.95);
+    background: #241e18;
+    border-color: #c9a96e;
+    box-shadow: 0 0 15px rgba(201, 169, 110, 0.35), inset 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.slide-arrow-btn:active:not(:disabled) svg,
+.slide-arrow-btn.glow-pulse:not(:disabled) svg {
+    stroke: #c9a96e;
+}
+
+.slide-arrow-btn:disabled,
+.slide-arrow-btn[disabled] {
+    opacity: 0.18;
+    cursor: not-allowed;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0.06);
+    background: #0f0d0c;
+    box-shadow: none;
+}
+
+.slide-arrow-btn:disabled svg {
+    stroke: rgba(255, 255, 255, 0.22);
+}
+
+/* Bottom Navigation Dock */
+.slide-nav-dock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.25rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 1rem;
+}
+
+.slide-arrows-pair {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: auto;
+}
+
+.slide-nav-dock:has(button.btn-gold) .slide-arrows-pair {
+    margin-left: 0;
+}
+
+.slide-btn-prev:hover {
+    background: rgba(201, 169, 110, 0.08);
+    border-color: #c9a96e;
+}
+
+/* Interactive Calendar */
+.calendar-card {
+    background: #0f0d0b;
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.calendar-month {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #c9a96e;
+}
+
+.calendar-nav-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.calendar-nav-btn:hover {
+    background: #c9a96e;
+    color: #0c0a09;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.4rem;
+    text-align: center;
+}
+
+.calendar-day-label {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 0.4rem 0;
+}
+
+.calendar-cell {
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.82rem;
+    color: #f7f2ea;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.calendar-cell:hover:not(.disabled):not(.booked) {
+    background: rgba(201, 169, 110, 0.15);
+    border-color: #c9a96e;
+    color: #fff;
+}
+
+.calendar-cell.selected {
+    background: linear-gradient(135deg, #c9a96e, #e8d5b0) !important;
+    color: #0c0a09 !important;
+    font-weight: 600;
+    border-color: #c9a96e;
+    box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+}
+
+.calendar-cell.disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+    text-decoration: line-through;
+    background: transparent;
+}
+
+.calendar-cell.booked {
+    opacity: 0.35;
+    cursor: not-allowed;
+    background: rgba(239, 68, 68, 0.08);
+    color: #ef4444;
+}
+
+.calendar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.55);
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.4rem;
+}
+
+.legend-available { background: #10b981; }
+.legend-booked { background: #ef4444; }
+.legend-selected { background: #c9a96e; }
+
+/* Time Slot Selector */
+.slot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.slot-card {
+    background: #0f0d0b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.slot-card:hover {
+    border-color: #c9a96e;
+    background: rgba(201, 169, 110, 0.08);
+}
+
+.slot-card.active {
+    border-color: #c9a96e;
+    background: rgba(201, 169, 110, 0.15);
+    box-shadow: 0 0 0 1px #c9a96e;
+}
+
+.slot-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #f7f2ea;
+    margin-bottom: 0.2rem;
+}
+
+.slot-time {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.72rem;
+    color: #c9a96e;
+}
+
+/* --- Shopee-Style QRIS All Payment Master Card (Matching Dark Luxury Atelier Theme) --- */
+.shopee-payment-card {
+    background: #14110f;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(201, 169, 110, 0.12);
+    cursor: pointer;
+    border: 1px solid rgba(201, 169, 110, 0.35);
+    transition: all 0.25s ease;
+    user-select: none;
+    position: relative;
+}
+
+.shopee-payment-card:hover {
+    border-color: #c9a96e;
+    background: #191512;
+    box-shadow: 0 6px 25px rgba(201, 169, 110, 0.18), 0 4px 20px rgba(0, 0, 0, 0.6);
+    transform: translateY(-1px);
+}
+
+.shopee-payment-card.active {
+    border-color: #c9a96e;
+    background: #191512;
+    box-shadow: 0 0 0 1px #c9a96e, 0 8px 28px rgba(0, 0, 0, 0.65), 0 0 24px rgba(201, 169, 110, 0.2);
+}
+
+.shopee-card-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.shopee-card-title {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #f7f2ea;
+    letter-spacing: 0.02em;
+}
+
+.shopee-card-see-all {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #c9a96e;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    transition: color 0.2s ease;
+}
+
+.shopee-card-see-all:hover {
+    color: #dfc28a;
+}
+
+.shopee-card-main-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.shopee-card-content-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.shopee-qris-heading-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.shopee-qris-badge-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.shopee-qris-text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #f7f2ea;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.shopee-logos-strip {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.shopee-app-logo {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    padding: 2px 6px;
+    height: 22px;
+}
+
+.shopee-more-label {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.76rem;
+    font-weight: 500;
+    color: rgba(247, 242, 234, 0.55);
+}
+
+.shopee-check-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #c9a96e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0e0d0b;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(201, 169, 110, 0.35);
+}
+
+/* --- QRIS All Payment Master Card (Fallback Dark) --- */
+.qris-allpay-card {
+    background: #14110f;
+    border: 1px solid rgba(201, 169, 110, 0.45);
+    border-radius: 8px;
+    padding: 1.35rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin-bottom: 1.25rem;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.qris-allpay-card:hover {
+    border-color: #c9a96e;
+    background: #181412;
+    transform: translateY(-1px);
+}
+
+.qris-allpay-card.active {
+    border-color: #c9a96e;
+    background: #191512;
+    box-shadow: 0 0 0 1.5px #c9a96e, 0 6px 24px rgba(0, 0, 0, 0.5);
+}
+
+.qris-card-badge {
+    position: absolute;
+    top: -9px;
+    right: 1.25rem;
+    background: #c9a96e;
+    color: #0c0a09;
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.65rem;
+    border-radius: 20px;
+}
+
+.qris-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.qris-card-logo {
+    flex-shrink: 0;
+}
+
+.qris-card-title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #f7f2ea;
+    margin-bottom: 0.15rem;
+}
+
+.qris-card-sub {
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 0.76rem;
+    color: rgba(247, 242, 234, 0.6);
+    line-height: 1.4;
+}
+
+.qris-brands-strip {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.qris-strip-label {
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 0.68rem;
+    color: rgba(247, 242, 234, 0.45);
+    margin-right: 0.2rem;
+}
+
+.qris-mini-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    padding: 0.2rem 0.5rem;
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 0.68rem;
+    color: #e6dfd5;
+}
+
+.qris-mini-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Luxury Functional QRIS Payment Modal */
+.qris-payment-sheet {
+    background: radial-gradient(circle at 50% 0%, #1e1914 0%, #12100e 100%);
+    border: 1px solid rgba(201, 169, 110, 0.35);
+    border-radius: 12px;
+    max-width: 520px;
+    width: 92%;
+    padding: clamp(1.5rem, 3.5vw, 2.25rem);
+    text-align: center;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 50px rgba(201, 169, 110, 0.1);
+}
+
+/* Luxury Vintage Atelier Ticket */
+.qris-vintage-ticket {
+    background: #fdfaf5;
+    border: 1.5px solid #d4c8b2;
+    border-radius: 8px;
+    padding: 1.25rem 1.35rem;
+    color: #1a1714;
+    margin: 1.15rem auto;
+    max-width: 320px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+    position: relative;
+}
+
+.qris-vintage-ticket::before,
+.qris-vintage-ticket::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #161310;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1.5px solid #d4c8b2;
+}
+
+.qris-vintage-ticket::before {
+    left: -10px;
+}
+
+.qris-vintage-ticket::after {
+    right: -10px;
+}
+
+.qris-frame {
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 1.25rem 1.25rem 1rem;
+    color: #111;
+    margin: 1.25rem auto;
+    max-width: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.qris-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    border-bottom: 1.5px solid #d32f2f;
+    padding-bottom: 0.4rem;
+}
+
+.qris-merchant-name {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: #111;
+    letter-spacing: 0.04em;
+}
+
+.qris-nmid {
+    font-family: monospace;
+    font-size: 0.65rem;
+    color: #666;
+    margin-bottom: 0.6rem;
+}
+
+.qris-code-image {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    margin: 0 auto 0.5rem;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid #e0d7c7;
+}
+
+.qris-amount-tag {
+    background: #fbfbfb;
+    border: 1px dashed rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    padding: 0.45rem 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.qris-amount-val {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #14110f;
+    letter-spacing: 0.02em;
+}
+
+.qris-instruction-box {
+    text-align: left;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 1.25rem 0;
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 0.78rem;
+    color: rgba(247, 242, 234, 0.7);
+    line-height: 1.6;
+}
+
+.qris-instruction-box ol {
+    margin: 0.4rem 0 0 1.2rem;
+    padding: 0;
+}
+
+.qris-instruction-box li {
+    margin-bottom: 0.35rem;
+}
+
+/* --- Official Payment Grid & Cards (BCA, GoPay, OVO, DANA, ShopeePay, QRIS) --- */
+.payment-selector-title {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #d6cebf;
+    margin-bottom: 0.75rem;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.payment-card {
+    background: #0f0d0b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.payment-card:hover {
+    border-color: rgba(201, 169, 110, 0.45);
+    background: rgba(201, 169, 110, 0.05);
+}
+
+.payment-card.active {
+    border-color: #c9a96e;
+    background: rgba(201, 169, 110, 0.12);
+    box-shadow: 0 0 0 2px #c9a96e, 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.payment-card-logo-wrap {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+
+.payment-card-name {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #f7f2ea;
+    margin-bottom: 0.2rem;
+}
+
+.payment-card-desc {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.48);
+    line-height: 1.35;
+}
+
+.payment-card-check {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: grid;
+    place-items: center;
+    font-size: 0.6rem;
+    color: transparent;
+    transition: all 0.2s ease;
+}
+
+.payment-card.active .payment-card-check {
+    background: #c9a96e;
+    border-color: #c9a96e;
+    color: #0c0a09;
+}
+
+/* --- Vintage Luxury Order Summary Box --- */
+.summary-box {
+    background: #14110f;
+    border: 1px solid rgba(201, 169, 110, 0.28);
+    border-radius: 10px;
+    padding: 1.75rem 1.6rem;
+    position: sticky;
+    top: 6rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(201, 169, 110, 0.15);
+}
+
+.summary-vintage-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-bottom: 0.85rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+}
+
+.summary-vintage-ornament {
+    color: #c9a96e;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.summary-title,
+.summary-title-vintage {
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+    font-size: 1.85rem !important;
+    font-weight: 500 !important;
+    font-style: italic !important;
+    color: #f7f2ea !important;
+    margin: 0 !important;
+    letter-spacing: 0.02em !important;
+    text-align: center;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.85rem;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.summary-row-label {
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 0.82rem;
+    color: rgba(247, 242, 234, 0.6);
+}
+
+.summary-pkg-value {
+    font-family: "Cormorant Garamond", Georgia, serif !important;
+    font-size: 1.55rem !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+    color: #e2ba78 !important;
+    letter-spacing: 0.03em !important;
+    text-align: right;
+    max-width: 65%;
+    line-height: 1.25 !important;
+    text-shadow: 0 2px 10px rgba(201, 169, 110, 0.28);
+}
+
+.summary-val-calm {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 0.82rem !important;
+    font-weight: 400 !important;
+    color: #d6cebf !important;
+    text-align: right;
+}
+
+/* Exquisite Vintage Price Ticket Card */
+.summary-price-card,
+.vintage-price-ticket {
+    background: rgba(201, 169, 110, 0.05);
+    border: 1px dashed rgba(201, 169, 110, 0.35);
+    border-radius: 8px;
+    padding: 1.15rem 1.25rem;
+    margin: 1.25rem 0;
+    position: relative;
+}
+
+.summary-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-price-row.dp-highlight-row {
+    align-items: flex-start;
+}
+
+.summary-price-label {
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 0.82rem;
+    color: rgba(247, 242, 234, 0.7);
+}
+
+.summary-price-label.dp-label {
+    color: #e2ba78;
+    font-weight: 500;
+}
+
+.summary-dp-subtext {
+    display: block;
+    font-size: 0.68rem;
+    color: rgba(247, 242, 234, 0.45);
+    margin-top: 2px;
+}
+
+.summary-total-val {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #f7f2ea;
+    letter-spacing: 0.02em;
+}
+
+.summary-dp-val {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #e2ba78;
+    letter-spacing: 0.02em;
+}
+
+.summary-price-dashed-divider,
+.summary-price-divider {
+    border-top: 1px dashed rgba(201, 169, 110, 0.25);
+    margin: 0.85rem 0;
+}
+
+.summary-slot-guarantee {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 0.85rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 0.72rem;
+    color: rgba(247, 242, 234, 0.65);
+}
+
+.summary-row.total {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.15);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.summary-row.dp {
+    color: #e8d5b0;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+/* --- Status Tracker Styling --- */
+.status-tracker-card {
+    max-width: 44rem;
+    margin: 0 auto;
+    background: #14110f;
+    border: 1px solid rgba(201, 169, 110, 0.25);
+    border-radius: 8px;
+    padding: clamp(1.75rem, 4vw, 3rem);
+}
+
+.status-search-box {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 40rem) {
+    .status-search-box {
+        flex-direction: column;
+    }
+}
+
+.sample-code-chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sample-chip {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #c9a96e;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.sample-chip:hover {
+    background: rgba(201, 169, 110, 0.15);
+    border-color: #c9a96e;
+}
+
+/* Timeline Stages */
+.status-timeline {
+    position: relative;
+    padding: 1.5rem 0;
+    margin: 2.5rem 0 1.5rem;
+}
+
+.timeline-track {
+    position: absolute;
+    top: 28px;
+    left: 2rem;
+    right: 2rem;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+}
+
+.timeline-track-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #c9a96e, #e8d5b0);
+    transition: width 0.5s ease;
+}
+
+.timeline-steps {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 70px;
+}
+
+.step-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #14110f;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    display: grid;
+    place-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 0.6rem;
+    transition: all 0.3s ease;
+}
+
+.timeline-step.completed .step-circle {
+    background: #c9a96e;
+    border-color: #c9a96e;
+    color: #0c0a09;
+}
+
+.timeline-step.current .step-circle {
+    background: #0c0a09;
+    border-color: #e8d5b0;
+    color: #e8d5b0;
+    box-shadow: 0 0 0 4px rgba(201, 169, 110, 0.25);
+}
+
+.step-label {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.timeline-step.completed .step-label,
+.timeline-step.current .step-label {
+    color: #f7f2ea;
+    font-weight: 600;
+}
+
+/* Order Details Card */
+.order-detail-card {
+    background: #0f0d0b;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-top: 1.75rem;
+    text-align: left;
+}
+
+.order-badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.badge-waiting {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-confirmed {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-shooting {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.badge-editing {
+    background: rgba(201, 169, 110, 0.15);
+    color: #e8d5b0;
+    border: 1px solid rgba(201, 169, 110, 0.3);
+}
+
+.badge-done {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+/* --- Acara (Public Events) Cards --- */
+.acara-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.acara-card {
+    background: #14110f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.acara-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(201, 169, 110, 0.4);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.acara-card__media {
+    position: relative;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+}
+
+.acara-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.acara-card:hover .acara-card__media img {
+    transform: scale(1.05);
+}
+
+.acara-card__badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: rgba(12, 10, 9, 0.85);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(201, 169, 110, 0.4);
+    color: #c9a96e;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.75rem;
+    border-radius: 4px;
+}
+
+.acara-card__body {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.acara-card__date {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #c9a96e;
+    margin-bottom: 0.4rem;
+}
+
+.acara-card__title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #f7f2ea;
+    margin-bottom: 0.6rem;
+}
+
+.acara-card__loc {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 1.25rem;
+}
+
+.acara-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    margin-top: auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* --- Acara Show & Watermark Grid --- */
+.album-header-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.time-filter-strip {
+    background: #14110f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.time-filter-label {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #c9a96e;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.time-filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.time-pill {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.45rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.time-pill:hover {
+    border-color: #c9a96e;
+    color: #fff;
+}
+
+.time-pill.active {
+    background: #c9a96e;
+    border-color: #c9a96e;
+    color: #0c0a09;
+    font-weight: 600;
+}
+
+/* Watermark Photo Card */
+.photo-watermark-card {
+    position: relative;
+    background: #14110f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.photo-watermark-card.selected {
+    border-color: #c9a96e;
+    box-shadow: 0 0 0 2px #c9a96e, 0 8px 25px rgba(201, 169, 110, 0.25);
+}
+
+.watermark-container {
+    position: relative;
+    aspect-ratio: 3/2;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.watermark-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.watermark-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    display: grid;
+    place-items: center;
+    background: repeating-linear-gradient(
+        -35deg,
+        rgba(0, 0, 0, 0.03),
+        rgba(0, 0, 0, 0.03) 30px,
+        rgba(255, 255, 255, 0.05) 30px,
+        rgba(255, 255, 255, 0.05) 60px
+    );
+}
+
+.watermark-text {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.32);
+    transform: rotate(-25deg);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    user-select: none;
+}
+
+.photo-card-info {
+    padding: 0.85rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #110e0c;
+}
+
+.photo-code {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #f7f2ea;
+}
+
+.photo-time-badge {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.68rem;
+    color: #c9a96e;
+}
+
+.photo-select-btn {
+    background: transparent;
+    border: 1px solid rgba(201, 169, 110, 0.4);
+    color: #c9a96e;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.photo-select-btn:hover,
+.photo-watermark-card.selected .photo-select-btn {
+    background: #c9a96e;
+    color: #0c0a09;
+}
+
+/* Floating Cart Bar */
+.floating-cart-bar {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(120px);
+    background: rgba(14, 12, 10, 0.94);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(201, 169, 110, 0.4);
+    border-radius: 999px;
+    padding: 0.75rem 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1000;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(201, 169, 110, 0.2);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-cart-bar.active {
+    transform: translateX(-50%) translateY(0);
+}
+
+.cart-bar-info {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.85rem;
+    color: #f7f2ea;
+}
+
+.cart-bar-info strong {
+    color: #e8d5b0;
+    font-size: 1rem;
+}
+
+/* --- Checkout HD Photo Page --- */
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+@media (max-width: 64rem) {
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.selected-photos-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.preview-thumb-card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(201, 169, 110, 0.3);
+    aspect-ratio: 4/3;
+}
+
+.preview-thumb-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preview-thumb-code {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(12, 10, 9, 0.85);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.65rem;
+    color: #e8d5b0;
+    padding: 0.2rem 0.4rem;
+    text-align: center;
+}
+
+/* --- Contact Page Specifics --- */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 3.5rem;
+}
+
+@media (max-width: 64rem) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-card-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.contact-info-card {
+    background: #14110f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    transition: border-color 0.25s ease;
+}
+
+.contact-info-card:hover {
+    border-color: rgba(201, 169, 110, 0.35);
+}
+
+.contact-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgba(201, 169, 110, 0.12);
+    border: 1px solid rgba(201, 169, 110, 0.25);
+    color: #c9a96e;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+}
+
+.contact-card-label {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #c9a96e;
+    margin-bottom: 0.3rem;
+}
+
+.contact-card-val {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.25rem;
+    color: #f7f2ea;
+    margin-bottom: 0.2rem;
+}
+
+.contact-card-sub {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* FAQ Accordion — Centered Aesthetic Alignment */
+.faq-list {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-item {
+    width: 100%;
+    max-width: 760px;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+    text-align: center;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: none;
+    padding: 1.35rem 1rem;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #f7f2ea;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.85rem;
+    transition: all 0.25s ease;
+}
+
+.faq-question:hover {
+    color: #c9a96e;
+}
+
+.faq-answer {
+    padding-bottom: 1.5rem;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.86rem;
+    line-height: 1.85;
+    color: rgba(247, 242, 234, 0.65);
+    display: none;
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto;
+}
+
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+.faq-icon {
+    font-family: "Inter", monospace;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #c9a96e;
+    transition: transform 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(201, 169, 110, 0.35);
+    line-height: 1;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(45deg);
+    border-color: #c9a96e;
+    background: rgba(201, 169, 110, 0.15);
+}
+
+/* --- Admin Panel Styling --- */
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: #0c0a09;
+    color: #f7f2ea;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.admin-sidebar {
+    width: 260px;
+    background: #110e0c;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.admin-sidebar-header {
+    padding: 1.75rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.admin-brand {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.35rem;
+    color: #f7f2ea;
+    text-decoration: none;
+    display: block;
+}
+
+.admin-brand span {
+    color: #c9a96e;
+    font-style: italic;
+}
+
+.admin-nav {
+    padding: 1.5rem 0;
+    flex-grow: 1;
+}
+
+.admin-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.admin-nav-item:hover {
+    color: #f7f2ea;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.admin-nav-item.active {
+    color: #c9a96e;
+    background: rgba(201, 169, 110, 0.08);
+    border-left-color: #c9a96e;
+    font-weight: 500;
+}
+
+.admin-main {
+    flex-grow: 1;
+    padding: clamp(1.5rem, 3vw, 3rem);
+    overflow-y: auto;
+}
+
+.admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.admin-page-title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #f7f2ea;
+}
+
+.admin-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.admin-stat-card {
+    background: #14110f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 1.5rem;
+}
+
+.admin-stat-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.admin-stat-value {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #c9a96e;
+}
+
+.admin-table-card {
+    background: #14110f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.admin-table-header {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.82rem;
+}
+
+.admin-table th {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 0.9rem 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.admin-table td {
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.admin-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 54rem) {
+    .admin-wrapper {
+        flex-direction: column;
+    }
+    .admin-sidebar {
+        width: 100%;
+    }
+}
