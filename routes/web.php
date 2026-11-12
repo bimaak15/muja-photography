@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MidtransCallbackController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,6 +53,9 @@ Route::get('/acara/{album}/pesan', function (string $album) {
 Route::get('/kontak', function () {
     return view('coming-soon');
 })->name('kontak');
+
+/** Midtrans Webhook Callback — /midtrans/callback */
+Route::post('/midtrans/callback', MidtransCallbackController::class)->name('midtrans.callback');
 
 /*
 |--------------------------------------------------------------------------
