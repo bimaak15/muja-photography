@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MidtransCallbackController;
@@ -59,11 +60,25 @@ Route::post('/midtrans/callback', MidtransCallbackController::class)->name('midt
 
 /*
 |--------------------------------------------------------------------------
+| Autentikasi Admin & reCAPTCHA v2 — /admin/login
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware('guest')->group(function () {
+    Route::get('/admin/login', [AuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/admin/login', [AuthController::class, 'login'])->name('login.submit');
+});
+
+/*
+|--------------------------------------------------------------------------
 | Dashboard Admin — /admin (dilindungi autentikasi)
 |--------------------------------------------------------------------------
 */
 
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
+
+    /** Logout Admin — /admin/logout */
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
     /** Dashboard Utama — /admin */
     Route::get('/', function () {
