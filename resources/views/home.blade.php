@@ -20,18 +20,15 @@
         <div class="loader">
             <div class="loader__img">
                 <picture>
-                    <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2866-600.webp') }}"
-                        type="image/webp">
-                    <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2866-1200.webp') }}"
-                        type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2866-600.webp') }}" type="image/webp">
+                    <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2866-1200.webp') }}" type="image/webp">
                     <img alt="Pengantin bersanding di pelaminan bertema galaksi — MujaPhotography"
                         src="{{ asset('img/hero/mjp_2866.webp') }}">
                 </picture>
             </div>
             <div class="loader__img">
                 <picture>
-                    <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2599-600.webp') }}"
-                        type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2599-600.webp') }}" type="image/webp">
                     <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2599-1200.webp') }}"
                         type="image/webp">
                     <img alt="Pengantin berjabat tangan di bawah lampu gantung kristal — MujaPhotography"
@@ -40,8 +37,7 @@
             </div>
             <div class="loader__img">
                 <picture>
-                    <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2862-600.webp') }}"
-                        type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2862-600.webp') }}" type="image/webp">
                     <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2862-1200.webp') }}"
                         type="image/webp">
                     <img alt="Pasangan pengantin membelakangi backdrop galaksi berhuruf RR — MujaPhotography"
@@ -50,8 +46,7 @@
             </div>
             <div class="loader__img">
                 <picture>
-                    <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2682-600.webp') }}"
-                        type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2682-600.webp') }}" type="image/webp">
                     <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2682-1200.webp') }}"
                         type="image/webp">
                     <img alt="Pengantin tertawa di depan lampu gantung besar — MujaPhotography"
@@ -111,10 +106,8 @@
         {{-- Block 1 --}}
         <section class="block">
             <picture>
-                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2866-600.webp') }}"
-                    type="image/webp">
-                <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2866-1200.webp') }}"
-                    type="image/webp">
+                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2866-600.webp') }}" type="image/webp">
+                <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2866-1200.webp') }}" type="image/webp">
                 <img class="block__background" alt="Pengantin bersanding di pelaminan bertema galaksi — MujaPhotography"
                     src="{{ asset('img/hero/mjp_2866.webp') }}">
             </picture>
@@ -134,11 +127,10 @@
         {{-- Block 2 --}}
         <section class="block">
             <picture>
-                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2599-600.webp') }}"
-                    type="image/webp">
-                <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2599-1200.webp') }}"
-                    type="image/webp">
-                <img class="block__background" alt="Pengantin berjabat tangan di bawah lampu gantung kristal — MujaPhotography"
+                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2599-600.webp') }}" type="image/webp">
+                <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2599-1200.webp') }}" type="image/webp">
+                <img class="block__background"
+                    alt="Pengantin berjabat tangan di bawah lampu gantung kristal — MujaPhotography"
                     src="{{ asset('img/hero/mjp_2599.webp') }}">
             </picture>
             <div class="block__container">
@@ -153,11 +145,10 @@
         {{-- Block 3 --}}
         <section class="block">
             <picture>
-                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2862-600.webp') }}"
-                    type="image/webp">
-                <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2862-1200.webp') }}"
-                    type="image/webp">
-                <img class="block__background" alt="Pasangan pengantin membelakangi backdrop galaksi berhuruf RR — MujaPhotography"
+                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2862-600.webp') }}" type="image/webp">
+                <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2862-1200.webp') }}" type="image/webp">
+                <img class="block__background"
+                    alt="Pasangan pengantin membelakangi backdrop galaksi berhuruf RR — MujaPhotography"
                     src="{{ asset('img/hero/mjp_2862.webp') }}">
             </picture>
             <div class="block__container">
@@ -176,8 +167,7 @@
         {{-- Block 4 --}}
         <section class="block">
             <picture>
-                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2682-600.webp') }}"
-                    type="image/webp">
+                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2682-600.webp') }}" type="image/webp">
                 <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2682-1200.webp') }}"
                     type="image/webp">
                 <img class="block__background" alt="Pengantin tertawa di depan lampu gantung besar — MujaPhotography"
@@ -198,11 +188,11 @@
         {{-- Block 5 --}}
         <section class="block">
             <picture>
-                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2614-600.webp') }}"
-                    type="image/webp">
+                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2614-600.webp') }}" type="image/webp">
                 <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2614-1200.webp') }}"
                     type="image/webp">
-                <img class="block__background" alt="Pengantin bersalaman di antara tirai merah dan lampu gantung — MujaPhotography"
+                <img class="block__background"
+                    alt="Pengantin bersalaman di antara tirai merah dan lampu gantung — MujaPhotography"
                     src="{{ asset('img/hero/mjp_2614.webp') }}">
             </picture>
             <div class="block__container">
@@ -220,11 +210,11 @@
         {{-- Block 6 --}}
         <section class="block">
             <picture>
-                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2609-600.webp') }}"
-                    type="image/webp">
+                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2609-600.webp') }}" type="image/webp">
                 <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2609-1200.webp') }}"
                     type="image/webp">
-                <img class="block__background" alt="Pengantin mengenakan busana ivory tersenyum di depan pelaminan — MujaPhotography"
+                <img class="block__background"
+                    alt="Pengantin mengenakan busana ivory tersenyum di depan pelaminan — MujaPhotography"
                     src="{{ asset('img/hero/mjp_2609.webp') }}">
             </picture>
             <div class="block__container">
@@ -327,9 +317,13 @@
                 @for ($i = 1; $i <= 17; $i++)
                     @php
                         $item = isset($galleryItems) ? $galleryItems->get($i) : null;
-                        $imgUrl = ($item && $item->is_active) ? $item->image_url : asset($defaultFallbacks[$i] ?? 'img/hero/mjp_2866.webp');
+                        $imgUrl =
+                            $item && $item->is_active
+                                ? $item->image_url
+                                : asset($defaultFallbacks[$i] ?? 'img/hero/mjp_2866.webp');
                     @endphp
-                    <div class="grid__img pos-{{ $i }}" style="background-image:url('{{ $imgUrl }}')"></div>
+                    <div class="grid__img pos-{{ $i }}" style="background-image:url('{{ $imgUrl }}')">
+                    </div>
                 @endfor
             </div>
             {{-- Overlaid title, fades in after grid settles --}}
@@ -411,12 +405,11 @@
     <section class="muja-section cta-section" id="booking-cta" style="padding: 0;">
         <div class="cta-bg">
             <picture>
-                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2862-600.webp') }}"
-                    type="image/webp">
+                <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2862-600.webp') }}" type="image/webp">
                 <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2862-1200.webp') }}"
                     type="image/webp">
-                <img src="{{ asset('img/hero/mjp_2862.webp') }}"
-                    alt="Background — pelaminan bertema galaksi" loading="lazy">
+                <img src="{{ asset('img/hero/mjp_2862.webp') }}" alt="Background — pelaminan bertema galaksi"
+                    loading="lazy">
             </picture>
         </div>
         <div class="cta-content">
