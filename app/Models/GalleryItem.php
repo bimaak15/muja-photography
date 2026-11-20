@@ -56,7 +56,7 @@ class GalleryItem extends Model
                     return asset($path);
                 }
 
-                if (str_starts_with($path, 'storage/')) {
+                if (str_starts_with($path, 'storage/') || is_file(public_path($path))) {
                     return asset($path);
                 }
 
