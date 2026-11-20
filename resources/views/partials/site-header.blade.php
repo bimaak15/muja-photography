@@ -42,7 +42,6 @@
                 <ul class="nav-links">
                     <li><a href="{{ route('home') }}">Beranda</a></li>
                     <li><a href="{{ route('paket') }}">Paket &amp; Harga</a></li>
-                    <li><a href="{{ route('acara.index') }}">Acara</a></li>
                     <li><a href="{{ route('kontak') }}">Kontak</a></li>
                     <li><a href="{{ route('booking') }}">Booking Sekarang</a></li>
                 </ul>
