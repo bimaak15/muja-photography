@@ -114,10 +114,13 @@
 
         <!-- Sidebar Footer: Log Out & Brand Tagline -->
         <div class="p-4 border-t border-admin-subtle">
-            <a href="{{ route('home') }}" class="flex items-center gap-3 px-3 py-2 text-xs font-medium text-admin-muted hover:text-red-400 transition-colors">
-                <i data-lucide="log-out" class="w-4 h-4"></i>
-                <span>Log Out</span>
-            </a>
+            <form method="POST" action="{{ route('admin.logout') }}">
+                @csrf
+                <button type="submit" class="w-full flex items-center gap-3 px-3 py-2 text-xs font-medium text-admin-muted hover:text-red-400 transition-colors bg-transparent border-0 cursor-pointer">
+                    <i data-lucide="log-out" class="w-4 h-4"></i>
+                    <span>Log Out</span>
+                </button>
+            </form>
             <div class="mt-3 px-3">
                 <p class="font-['Cormorant_Garamond'] italic text-[0.8rem] text-admin-gold/70">Capture Your Best Moments</p>
             </div>

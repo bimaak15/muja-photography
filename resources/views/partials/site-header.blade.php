@@ -7,7 +7,7 @@
             {{-- Logo --}}
             <div class="logo">
                 <a href="{{ route('home') }}">
-                    <img src="{{ asset('img/logo-muja.webp') }}" alt="Muja Photography Logo" style="height:36px;">
+                    <img src="{{ asset('img/logo-muja.webp') }}" alt="Muja Photography Logo" style="height:88px;">
                 </a>
             </div>
             {{-- Hamburger Toggle --}}

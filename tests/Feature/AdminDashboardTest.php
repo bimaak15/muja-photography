@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\GalleryItem;
+use App\Models\User;
 use Database\Seeders\GalleryItemSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
@@ -12,6 +13,13 @@ use Tests\TestCase;
 class AdminDashboardTest extends TestCase
 {
     use RefreshDatabase;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->actingAs(User::factory()->create());
+    }
 
     public function test_admin_dashboard_can_be_rendered(): void
     {
