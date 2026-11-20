@@ -15,8 +15,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
         User::factory()->create([
             'name' => 'Admin Muja',
             'email' => 'admin@mujaphotography.com',
@@ -24,6 +22,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             GalleryItemSeeder::class,
+            PackageSeeder::class,
         ]);
     }
 }

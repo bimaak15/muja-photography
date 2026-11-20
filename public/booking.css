@@ -1,0 +1,520 @@
+/* ============================================================
+   MUJA PHOTOGRAPHY - Halaman Booking, Pembayaran & Cek Status
+   Menggunakan CSS murni (non-layered) agar tidak tertimpa reset hero.min.css
+============================================================ */
+
+.booking-page {
+    position: relative;
+    min-height: 100vh;
+    padding: clamp(8.5rem, 15vh, 11rem) clamp(1.25rem, 5vw, 3.5rem) clamp(5rem, 10vh, 7rem);
+    background-color: #0c0a09;
+    color: #f5f0ea;
+    overflow: hidden;
+}
+
+.booking-page__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.booking-page__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 35%;
+    filter: saturate(0.7) brightness(0.24);
+}
+
+.booking-page::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to bottom,
+        rgba(8, 7, 6, 0.92) 0%,
+        rgba(8, 7, 6, 0.55) 35%,
+        rgba(8, 7, 6, 0.72) 75%,
+        rgba(8, 7, 6, 0.96) 100%
+    );
+    pointer-events: none;
+}
+
+.booking-wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 72rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.booking-wrap--narrow {
+    max-width: 46rem;
+}
+
+.booking-header {
+    max-width: 40rem;
+    margin: 0 auto clamp(2.5rem, 5vw, 3.5rem);
+    text-align: center;
+}
+
+.booking-header .section-label {
+    display: inline-block;
+    margin-bottom: 0.9rem;
+    color: #c9a96e;
+}
+
+.booking-title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.3rem, 4.8vw, 3.9rem);
+    font-weight: 300;
+    line-height: 1.12;
+    color: #f7f2ea;
+    margin-bottom: 1rem;
+}
+
+.booking-title em {
+    font-style: italic;
+    color: #e8d5b0;
+}
+
+.booking-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(245, 240, 234, 0.65);
+    margin: 0 auto;
+}
+
+/* Alert Box */
+.booking-alert {
+    padding: 1.15rem 1.4rem;
+    margin-bottom: 2rem;
+    background-color: rgba(220, 38, 38, 0.14);
+    border: 1px solid rgba(248, 113, 113, 0.35);
+    color: #fecaca;
+    font-family: "Inter", sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.65;
+}
+
+.booking-alert ul {
+    margin: 0.4rem 0 0 1.2rem;
+}
+
+/* 2-Column Layout */
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1.35fr 0.95fr;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    align-items: start;
+}
+
+.booking-card {
+    background-color: rgba(16, 14, 12, 0.84);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(201, 169, 110, 0.24);
+    padding: clamp(1.75rem, 3.2vw, 2.75rem);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+}
+
+.booking-card--summary {
+    position: sticky;
+    top: 7.5rem;
+    border-color: rgba(201, 169, 110, 0.42);
+    background-color: rgba(18, 15, 12, 0.92);
+}
+
+.booking-section-head {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.18);
+}
+
+.booking-section-head + .booking-field,
+.booking-section-divider {
+    margin-top: 2rem;
+}
+
+.booking-section-title {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.55rem;
+    font-weight: 400;
+    color: #f7f2ea;
+    letter-spacing: 0.02em;
+}
+
+.booking-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.booking-field {
+    margin-bottom: 1.35rem;
+}
+
+.booking-label {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 0.66rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #c9a96e;
+    margin-bottom: 0.55rem;
+}
+
+.booking-input,
+.booking-select,
+.booking-textarea {
+    width: 100%;
+    padding: 0.85rem 1.05rem;
+    background-color: rgba(10, 8, 7, 0.9);
+    border: 1px solid rgba(201, 169, 110, 0.26);
+    color: #f5f0ea;
+    font-family: "Inter", sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.5;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    color-scheme: dark;
+}
+
+.booking-input::placeholder,
+.booking-textarea::placeholder {
+    color: rgba(245, 240, 234, 0.32);
+}
+
+.booking-input:focus,
+.booking-select:focus,
+.booking-textarea:focus {
+    outline: none;
+    border-color: #c9a96e;
+    box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.16);
+}
+
+.booking-select option {
+    background-color: #141210;
+    color: #f5f0ea;
+}
+
+/* Radio Options */
+.booking-pay-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.booking-pay-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 1.1rem 1.15rem;
+    background-color: rgba(10, 8, 7, 0.8);
+    border: 1px solid rgba(201, 169, 110, 0.26);
+    cursor: pointer;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.booking-pay-option:hover {
+    border-color: #c9a96e;
+    background-color: rgba(201, 169, 110, 0.08);
+}
+
+.booking-pay-option input[type="radio"] {
+    margin-top: 0.22rem;
+    accent-color: #c9a96e;
+}
+
+.booking-pay-option__title {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: #f7f2ea;
+    margin-bottom: 0.25rem;
+}
+
+.booking-pay-option__desc {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 300;
+    line-height: 1.55;
+    color: rgba(245, 240, 234, 0.55);
+}
+
+/* Summary Sidebar */
+.booking-summary-tag {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #c9a96e;
+    margin-bottom: 0.4rem;
+}
+
+.booking-summary-name {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.75rem, 2.4vw, 2.2rem);
+    font-weight: 400;
+    color: #f7f2ea;
+    line-height: 1.15;
+}
+
+.booking-summary-cat {
+    font-family: "Inter", sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(232, 213, 176, 0.75);
+    margin-top: 0.35rem;
+}
+
+.booking-summary-features {
+    list-style: none;
+    margin: 1.4rem 0;
+    padding: 1.35rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: grid;
+    gap: 0.6rem;
+}
+
+.booking-summary-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 300;
+    line-height: 1.55;
+    color: rgba(245, 240, 234, 0.76);
+}
+
+.booking-summary-features li span:first-child {
+    color: #c9a96e;
+}
+
+.booking-summary-calc {
+    display: grid;
+    gap: 0.75rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.84rem;
+}
+
+.booking-summary-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(245, 240, 234, 0.7);
+}
+
+.booking-summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 1rem;
+    margin-top: 0.35rem;
+    border-top: 1px solid rgba(201, 169, 110, 0.25);
+}
+
+.booking-summary-total__label {
+    font-family: "Inter", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #c9a96e;
+}
+
+.booking-summary-total__amount {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.9rem, 2.6vw, 2.4rem);
+    font-weight: 400;
+    color: #e8d5b0;
+}
+
+.booking-submit-btn {
+    display: block;
+    width: 100%;
+    margin-top: 1.75rem;
+    padding: 1.05rem 1.5rem;
+    background: linear-gradient(135deg, #c9a96e, #e8d5b0);
+    color: #0c0a09;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.booking-submit-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+
+.booking-ghost-btn {
+    display: block;
+    width: 100%;
+    padding: 1.05rem 1.5rem;
+    background: transparent;
+    color: #e8d5b0;
+    border: 1px solid rgba(201, 169, 110, 0.45);
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.booking-ghost-btn:hover {
+    background-color: rgba(201, 169, 110, 0.12);
+    color: #ffffff;
+}
+
+.booking-footnote {
+    margin-top: 1rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 300;
+    line-height: 1.65;
+    color: rgba(245, 240, 234, 0.48);
+    text-align: center;
+}
+
+/* Invoice & Status Detail Grid */
+.invoice-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1.35rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.invoice-badge {
+    padding: 0.4rem 1rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.64rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border: 1px solid rgba(201, 169, 110, 0.4);
+    background-color: rgba(201, 169, 110, 0.16);
+    color: #e8d5b0;
+}
+
+.invoice-badge--paid {
+    border-color: rgba(52, 211, 153, 0.4);
+    background-color: rgba(16, 185, 129, 0.16);
+    color: #6ee7b7;
+}
+
+.invoice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.75rem;
+    font-family: "Inter", sans-serif;
+}
+
+.invoice-info-title {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #c9a96e;
+    margin-bottom: 0.45rem;
+}
+
+.invoice-info-main {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #f7f2ea;
+    margin-bottom: 0.25rem;
+}
+
+.invoice-info-sub {
+    font-size: 0.78rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(245, 240, 234, 0.65);
+}
+
+.invoice-amount-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.35rem 1.5rem;
+    background-color: rgba(10, 8, 7, 0.85);
+    border: 1px solid rgba(201, 169, 110, 0.25);
+    margin-bottom: 1.75rem;
+}
+
+.invoice-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.status-search-form {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.status-search-form .booking-submit-btn {
+    margin-top: 0;
+    width: auto;
+    white-space: nowrap;
+    padding: 0.85rem 2rem;
+}
+
+@media (max-width: 60rem) {
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-card--summary {
+        position: static;
+    }
+}
+
+@media (max-width: 42rem) {
+    .booking-row,
+    .booking-pay-options,
+    .invoice-grid,
+    .invoice-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .status-search-form {
+        flex-direction: column;
+    }
+
+    .status-search-form .booking-submit-btn {
+        width: 100%;
+    }
+}
+

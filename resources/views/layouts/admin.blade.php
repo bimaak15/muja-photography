@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Admin Dashboard') — MUJA PHOTOGRAPHY</title>
+    <title>@yield('title', 'Admin Dashboard') - MUJA PHOTOGRAPHY</title>
 
     <!-- Google Fonts: Bebas Neue, Inter, Cormorant Garamond -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Alpine.js — dipakai modal edit galeri, tab settings, dll. -->
+    <!-- Alpine.js - dipakai modal edit galeri, tab settings, dll. -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- Tailwind CSS (via Vite) & Custom Admin CSS -->

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="@yield('meta_description', 'MujaPhotography — Jasa fotografi profesional untuk wedding, pre-wedding, sesi personal, dan peliputan acara publik di Surabaya.')">
+        <meta name="description" content="@yield('meta_description', 'MujaPhotography - Jasa fotografi profesional untuk wedding, pre-wedding, sesi personal, dan peliputan acara publik di Surabaya.')">
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
         <title>@yield('title', 'MujaPhotography') | MujaPhotography</title>
 

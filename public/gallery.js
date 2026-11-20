@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * MUJA PHOTOGRAPHY — Gallery Section
+ * MUJA PHOTOGRAPHY - Gallery Section
  * Adaptasi dari library/gallery (formasi "data-grid-first")
  *
  * Grid foto akan naik dari bawah satu per satu saat section

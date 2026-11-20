@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MidtransCallbackController;
 use Illuminate\Support\Facades\Route;
@@ -25,15 +26,13 @@ Route::get('/paket', function () {
     return view('paket');
 })->name('paket');
 
-/** Booking sesi privat — /booking */
-Route::get('/booking', function () {
-    return view('coming-soon');
-})->name('booking');
+/** Booking sesi privat - /booking */
+Route::get('/booking', [BookingController::class, 'create'])->name('booking');
+Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
+Route::get('/booking/{booking:booking_code}/bayar', [BookingController::class, 'pay'])->name('booking.pay');
 
-/** Cek status pesanan — /status */
-Route::get('/status', function () {
-    return view('coming-soon');
-})->name('status');
+/** Cek status pesanan - /status */
+Route::get('/status', [BookingController::class, 'status'])->name('status');
 
 /** Daftar album acara — /acara */
 Route::get('/acara', function () {

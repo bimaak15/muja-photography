@@ -1,6 +1,6 @@
 
 // ======================================================
-// Navbar MujaPhotography — diambil dari library/navbar
+// Navbar MujaPhotography - diambil dari library/navbar
 // Dihapus: SPA routing; Dipertahankan: animasi GSAP open/close
 // ======================================================
 
