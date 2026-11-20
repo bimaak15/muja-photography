@@ -390,55 +390,9 @@
     </section>
 
     {{-- ----------------------------------------------------------
-         SECTION 4: PROCESS — How It Works
+         SECTION 4: TESTIMONIAL
     ---------------------------------------------------------- --}}
-    <section class="muja-section muja-section--cream" id="cara-kerja">
-        <div class="muja-container">
-            <div class="process-header">
-                <span class="section-label">Cara Kerja</span>
-                <h2 class="section-heading">
-                    Empat Langkah <em>Sederhana</em>
-                </h2>
-                <div class="gold-line gold-line--center"></div>
-            </div>
-
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3 class="step-title" style="color: #1a1714;">Pilih Paket</h3>
-                    <p class="step-desc" style="color: rgba(26,23,20,0.5);">
-                        Telusuri paket yang sesuai kebutuhan dan anggaran Anda.
-                    </p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number" style="background: #f5f0ea;">2</div>
-                    <h3 class="step-title" style="color: #1a1714;">Tentukan Tanggal</h3>
-                    <p class="step-desc" style="color: rgba(26,23,20,0.5);">
-                        Cek ketersediaan kalender dan pilih tanggal yang Anda inginkan.
-                    </p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number" style="background: #f5f0ea;">3</div>
-                    <h3 class="step-title" style="color: #1a1714;">Konfirmasi Booking</h3>
-                    <p class="step-desc" style="color: rgba(26,23,20,0.5);">
-                        Selesaikan pemesanan dan terima kode unik untuk melacak progres.
-                    </p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number" style="background: #f5f0ea;">4</div>
-                    <h3 class="step-title" style="color: #1a1714;">Terima Hasil</h3>
-                    <p class="step-desc" style="color: rgba(26,23,20,0.5);">
-                        Foto diedit profesional dan dikirim dalam galeri online pribadi Anda.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {{-- ----------------------------------------------------------
-         SECTION 5: TESTIMONIAL
-    ---------------------------------------------------------- --}}
-    <section class="muja-section muja-section--cream" id="testimoni" style="padding-top: 0;">
+    <section class="muja-section muja-section--cream" id="testimoni">
         <div class="muja-container">
             <div class="testimonial-wrapper">
                 <div class="gold-line gold-line--center" style="margin-bottom: 3rem;"></div>
