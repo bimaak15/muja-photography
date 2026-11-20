@@ -1,5 +1,5 @@
 /* ============================================================
-   MUJA PHOTOGRAPHY — Admin Dashboard Styles (Figma Slicing)
+   MUJA PHOTOGRAPHY - Admin Dashboard Styles (Figma Slicing)
    Nuansa: Obsidian Black (#0D0D0D / #141414), Gold Accent (#C9A96E / #E5C384),
    Border subtle (#262626), Muted text (#8E8E93).
 ============================================================ */
@@ -29,7 +29,7 @@
     --admin-blue-bg: rgba(10, 132, 255, 0.12);
 }
 
-/* Alpine.js — sembunyikan elemen ber-x-cloak sampai runtime siap dimuat */
+/* Alpine.js - sembunyikan elemen ber-x-cloak sampai runtime siap dimuat */
 [x-cloak] {
     display: none !important;
 }

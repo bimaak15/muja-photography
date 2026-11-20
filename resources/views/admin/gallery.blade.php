@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Gallery Management — Muja Studio')
+@section('title', 'Gallery Management - Muja Studio')
 
 @section('content')
 <div x-data="{

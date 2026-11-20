@@ -1,5 +1,5 @@
 /* ============================================================
-   MUJA PHOTOGRAPHY — Halaman Paket & Harga
+   MUJA PHOTOGRAPHY - Halaman Paket & Harga
    Nuansa sama dengan beranda: cream, ink, aksen emas.
 ============================================================ */
 
@@ -112,9 +112,194 @@
     padding-bottom: clamp(4rem, 7vw, 6rem);
 }
 
+/* ------------------------------------------------------------
+   SECTION DENGAN BACKGROUND FOTO (seperti halaman beranda)
+------------------------------------------------------------ */
+.price-section--photo {
+    position: relative;
+    overflow: hidden;
+    background-color: #0c0a09;
+    color: #f5f0ea;
+}
+
+.price-section__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.price-section__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 35%;
+    filter: saturate(0.75) brightness(0.32);
+    transform: scale(1.02);
+}
+
+.price-section--photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to bottom,
+        rgba(8, 7, 6, 0.88) 0%,
+        rgba(8, 7, 6, 0.45) 30%,
+        rgba(8, 7, 6, 0.55) 70%,
+        rgba(8, 7, 6, 0.92) 100%
+    );
+    pointer-events: none;
+}
+
+.price-section__inner {
+    position: relative;
+    z-index: 2;
+}
+
+.price-section--photo .section-heading {
+    color: #f7f2ea;
+}
+
+.price-section--photo .section-body {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.price-section--photo .venue-switch__label {
+    color: rgba(245, 240, 234, 0.65);
+    border-color: rgba(201, 169, 110, 0.28);
+    background-color: rgba(12, 10, 9, 0.55);
+    backdrop-filter: blur(8px);
+}
+
+.price-section--photo .venue-switch__label:hover {
+    color: #f7f2ea;
+    border-color: rgba(201, 169, 110, 0.6);
+}
+
+.price-section--photo #venue-rumah:checked ~ .venue-switch__labels label[for="venue-rumah"],
+.price-section--photo #venue-gedung:checked ~ .venue-switch__labels label[for="venue-gedung"] {
+    background: linear-gradient(135deg, #c9a96e, #e8d5b0);
+    border-color: #c9a96e;
+    color: #0c0a09;
+    font-weight: 600;
+}
+
+.price-section--photo .price-card {
+    background-color: rgba(12, 10, 9, 0.78);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-color: rgba(201, 169, 110, 0.22);
+    color: #f5f0ea;
+}
+
+.price-section--photo .price-card:hover {
+    border-color: rgba(201, 169, 110, 0.55);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+}
+
+.price-section--photo .price-card--featured {
+    background-color: rgba(18, 15, 12, 0.9);
+    border-color: rgba(201, 169, 110, 0.55);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.65);
+}
+
+.price-section--photo .price-tagline {
+    color: #c9a96e;
+}
+
+.price-section--photo .price-value {
+    border-color: rgba(255, 255, 255, 0.12);
+    color: #f5f0ea;
+}
+
+.price-section--photo .price-currency {
+    color: #c9a96e;
+}
+
+.price-section--photo .price-unit {
+    color: rgba(245, 240, 234, 0.5);
+}
+
+.price-section--photo .price-features li {
+    color: rgba(245, 240, 234, 0.72);
+}
+
+.price-section--photo .price-note {
+    color: rgba(245, 240, 234, 0.6);
+}
+
+.price-section--photo .price-note a {
+    color: #e8d5b0;
+    border-color: rgba(232, 213, 176, 0.4);
+}
+
+.price-section--photo .price-note a:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.price-section--photo .price-list {
+    border-top-color: rgba(201, 169, 110, 0.18);
+}
+
+.price-section--photo .price-row {
+    border-bottom-color: rgba(201, 169, 110, 0.18);
+}
+
+.price-section--photo .price-row__title {
+    color: #f7f2ea;
+}
+
+.price-section--photo .price-row__catatan {
+    color: rgba(245, 240, 234, 0.55);
+}
+
+.price-section--photo .price-row__items {
+    background-color: rgba(201, 169, 110, 0.16);
+    border-color: rgba(201, 169, 110, 0.22);
+}
+
+.price-section--photo .price-mini {
+    background-color: rgba(12, 10, 9, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.price-section--photo .price-mini:hover {
+    background-color: rgba(20, 17, 14, 0.92);
+}
+
+.price-section--photo .price-mini__head {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.price-section--photo .price-mini__name,
+.price-section--photo .price-mini__price {
+    color: #f7f2ea;
+}
+
+.price-section--photo .price-mini__price span {
+    color: #c9a96e;
+}
+
+.price-section--photo .price-mini__features li {
+    color: rgba(245, 240, 234, 0.7);
+}
+
+.price-section--photo .price-mini__link {
+    color: #e8d5b0;
+    border-bottom-color: rgba(232, 213, 176, 0.35);
+}
+
+.price-section--photo .price-mini__link:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
 
 /* ------------------------------------------------------------
-   PEMILIH LOKASI ACARA (pure CSS — tanpa JavaScript)
+   PEMILIH LOKASI ACARA (pure CSS - tanpa JavaScript)
 ------------------------------------------------------------ */
 .venue-switch {
     position: relative;
@@ -652,7 +837,7 @@
 
 
 /* ------------------------------------------------------------
-   CTA — baris kontak
+   CTA - baris kontak
 ------------------------------------------------------------ */
 .cta-contact {
     margin-top: 2.25rem;

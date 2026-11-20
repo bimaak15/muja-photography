@@ -1,5 +1,5 @@
-﻿/* ============================================================
-   MUJA PHOTOGRAPHY — Custom Hero Enhancements
+/* ============================================================
+   MUJA PHOTOGRAPHY - Custom Hero Enhancements
    - Dark overlay on block backgrounds
    - Elegant wedding-style typography (Cormorant Garamond)
    - Gold accent palette
@@ -15,7 +15,7 @@
 }
 
 /* ============================================================
-   1. ELEGANT TYPOGRAPHY — Overlay intro text
+   1. ELEGANT TYPOGRAPHY - Overlay intro text
 ============================================================ */
 
 .overlay__column {
@@ -99,7 +99,7 @@
 }
 
 /* ============================================================
-   3. BLOCK TEXT — Elegant serif typography
+   3. BLOCK TEXT - Elegant serif typography
 ============================================================ */
 
 .block__text {
@@ -127,7 +127,7 @@
 ============================================================ */
 
 .block__content::before {
-    content: "— \2726 —";
+    content: "\2726";
     display: block;
     font-family: var(--font-display);
     font-size: 0.85rem;
@@ -139,7 +139,7 @@
 }
 
 /* ============================================================
-   5. BLOCK background image — slightly desaturated
+   5. BLOCK background image - slightly desaturated
 ============================================================ */
 
 .block__background {
@@ -152,7 +152,7 @@
 }
 
 /* ============================================================
-   6. SCROLL INDICATOR — animated chevron
+   6. SCROLL INDICATOR - animated chevron
 ============================================================ */
 
 .block:first-of-type .block__container {
@@ -180,7 +180,7 @@
 }
 
 /* ============================================================
-   7. RESPONSIVE — mobile
+   7. RESPONSIVE - mobile
 ============================================================ */
 
 @media (max-width: 48rem) {

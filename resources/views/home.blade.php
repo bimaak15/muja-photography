@@ -2,7 +2,7 @@
 
 @section('title', 'Beranda')
 @section('meta_description',
-    'MujaPhotography — Jasa fotografi profesional untuk wedding, pre-wedding, sesi personal,
+    'MujaPhotography - Jasa fotografi profesional untuk wedding, pre-wedding, sesi personal,
     dan peliputan acara publik di Surabaya. Pesan sesi sekarang.')
 
 @section('content')
@@ -10,19 +10,19 @@
     @include('partials.site-header')
 
     {{-- ============================================================
-         MAIN — HERO SECTION
+         MAIN - HERO SECTION
     ============================================================ --}}
     <main class="page">
 
         {{-- ----------------------------------------------------------
-             PRELOADER / LOADER — animasi intro foto
+             PRELOADER / LOADER - animasi intro foto
         ---------------------------------------------------------- --}}
         <div class="loader">
             <div class="loader__img">
                 <picture>
                     <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2866-600.webp') }}" type="image/webp">
                     <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2866-1200.webp') }}" type="image/webp">
-                    <img alt="Pengantin bersanding di pelaminan bertema galaksi — MujaPhotography"
+                    <img alt="Pengantin bersanding di pelaminan bertema galaksi - MujaPhotography"
                         src="{{ asset('img/hero/mjp_2866.webp') }}">
                 </picture>
             </div>
@@ -31,7 +31,7 @@
                     <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2599-600.webp') }}" type="image/webp">
                     <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2599-1200.webp') }}"
                         type="image/webp">
-                    <img alt="Pengantin berjabat tangan di bawah lampu gantung kristal — MujaPhotography"
+                    <img alt="Pengantin berjabat tangan di bawah lampu gantung kristal - MujaPhotography"
                         src="{{ asset('img/hero/mjp_2599.webp') }}">
                 </picture>
             </div>
@@ -40,7 +40,7 @@
                     <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2862-600.webp') }}" type="image/webp">
                     <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2862-1200.webp') }}"
                         type="image/webp">
-                    <img alt="Pasangan pengantin membelakangi backdrop galaksi berhuruf RR — MujaPhotography"
+                    <img alt="Pasangan pengantin membelakangi backdrop galaksi berhuruf RR - MujaPhotography"
                         src="{{ asset('img/hero/mjp_2862.webp') }}">
                 </picture>
             </div>
@@ -49,7 +49,7 @@
                     <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2682-600.webp') }}" type="image/webp">
                     <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2682-1200.webp') }}"
                         type="image/webp">
-                    <img alt="Pengantin tertawa di depan lampu gantung besar — MujaPhotography"
+                    <img alt="Pengantin tertawa di depan lampu gantung besar - MujaPhotography"
                         src="{{ asset('img/hero/mjp_2682.webp') }}">
                 </picture>
             </div>
@@ -59,7 +59,7 @@
                         type="image/webp">
                     <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2614-1200.webp') }}"
                         type="image/webp">
-                    <img alt="Pengantin bersalaman di antara tirai merah dan lampu gantung — MujaPhotography"
+                    <img alt="Pengantin bersalaman di antara tirai merah dan lampu gantung - MujaPhotography"
                         src="{{ asset('img/hero/mjp_2614.webp') }}">
                 </picture>
             </div>
@@ -69,14 +69,14 @@
                         type="image/webp">
                     <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2609-1200.webp') }}"
                         type="image/webp">
-                    <img alt="Pengantin mengenakan busana ivory tersenyum di depan pelaminan — MujaPhotography"
+                    <img alt="Pengantin mengenakan busana ivory tersenyum di depan pelaminan - MujaPhotography"
                         src="{{ asset('img/hero/mjp_2609.webp') }}">
                 </picture>
             </div>
         </div>
 
         {{-- ----------------------------------------------------------
-             OVERLAY — teks intro + CTA
+             OVERLAY - teks intro + CTA
         ---------------------------------------------------------- --}}
         <div class="overlay">
             <div class="overlay__column">
@@ -100,7 +100,7 @@
         </div>
 
         {{-- ----------------------------------------------------------
-             HERO BLOCKS — section parallax per foto
+             HERO BLOCKS - section parallax per foto
         ---------------------------------------------------------- --}}
 
         {{-- Block 1 --}}
@@ -108,13 +108,13 @@
             <picture>
                 <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2866-600.webp') }}" type="image/webp">
                 <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2866-1200.webp') }}" type="image/webp">
-                <img class="block__background" alt="Pengantin bersanding di pelaminan bertema galaksi — MujaPhotography"
+                <img class="block__background" alt="Pengantin bersanding di pelaminan bertema galaksi - MujaPhotography"
                     src="{{ asset('img/hero/mjp_2866.webp') }}">
             </picture>
             <div class="block__container">
                 <div class="block__content">
                     <p class="block__text">
-                        Dari momen sakral pernikahan hingga peliputan aksi komunitas — setiap jepretan kami merekam cerita
+                        Dari momen sakral pernikahan hingga peliputan aksi komunitas - setiap jepretan kami merekam cerita
                         yang nyata.
                     </p>
                     <p class="block__text">
@@ -130,7 +130,7 @@
                 <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2599-600.webp') }}" type="image/webp">
                 <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2599-1200.webp') }}" type="image/webp">
                 <img class="block__background"
-                    alt="Pengantin berjabat tangan di bawah lampu gantung kristal — MujaPhotography"
+                    alt="Pengantin berjabat tangan di bawah lampu gantung kristal - MujaPhotography"
                     src="{{ asset('img/hero/mjp_2599.webp') }}">
             </picture>
             <div class="block__container">
@@ -148,7 +148,7 @@
                 <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2862-600.webp') }}" type="image/webp">
                 <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2862-1200.webp') }}" type="image/webp">
                 <img class="block__background"
-                    alt="Pasangan pengantin membelakangi backdrop galaksi berhuruf RR — MujaPhotography"
+                    alt="Pasangan pengantin membelakangi backdrop galaksi berhuruf RR - MujaPhotography"
                     src="{{ asset('img/hero/mjp_2862.webp') }}">
             </picture>
             <div class="block__container">
@@ -170,7 +170,7 @@
                 <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2682-600.webp') }}" type="image/webp">
                 <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2682-1200.webp') }}"
                     type="image/webp">
-                <img class="block__background" alt="Pengantin tertawa di depan lampu gantung besar — MujaPhotography"
+                <img class="block__background" alt="Pengantin tertawa di depan lampu gantung besar - MujaPhotography"
                     src="{{ asset('img/hero/mjp_2682.webp') }}">
             </picture>
             <div class="block__container">
@@ -179,7 +179,7 @@
                         Pantau progres pesananmu kapan saja menggunakan kode unik yang kamu terima saat booking.
                     </p>
                     <p class="block__text">
-                        Tidak perlu menunggu balasan chat — status pesanan selalu terbaru.
+                        Tidak perlu menunggu balasan chat - status pesanan selalu terbaru.
                     </p>
                 </div>
             </div>
@@ -192,7 +192,7 @@
                 <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2614-1200.webp') }}"
                     type="image/webp">
                 <img class="block__background"
-                    alt="Pengantin bersalaman di antara tirai merah dan lampu gantung — MujaPhotography"
+                    alt="Pengantin bersalaman di antara tirai merah dan lampu gantung - MujaPhotography"
                     src="{{ asset('img/hero/mjp_2614.webp') }}">
             </picture>
             <div class="block__container">
@@ -214,7 +214,7 @@
                 <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2609-1200.webp') }}"
                     type="image/webp">
                 <img class="block__background"
-                    alt="Pengantin mengenakan busana ivory tersenyum di depan pelaminan — MujaPhotography"
+                    alt="Pengantin mengenakan busana ivory tersenyum di depan pelaminan - MujaPhotography"
                     src="{{ asset('img/hero/mjp_2609.webp') }}">
             </picture>
             <div class="block__container">
@@ -232,11 +232,11 @@
     </main>
 
     {{-- ============================================================
-         MAIN CONTENT SECTIONS — After Hero
+         MAIN CONTENT SECTIONS - After Hero
     ============================================================ --}}
 
     {{-- ----------------------------------------------------------
-         SECTION 1: ABOUT — Split layout
+         SECTION 1: ABOUT - Split layout
     ---------------------------------------------------------- --}}
     <section class="muja-section" id="tentang-kami">
         <div class="muja-container">
@@ -248,7 +248,7 @@
                         <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2609-1200.webp') }}"
                             type="image/webp">
                         <img src="{{ asset('img/hero/mjp_2609.webp') }}"
-                            alt="Pengantin mengenakan busana ivory tersenyum di depan pelaminan — MujaPhotography"
+                            alt="Pengantin mengenakan busana ivory tersenyum di depan pelaminan - MujaPhotography"
                             loading="lazy">
                     </picture>
                 </div>
@@ -260,7 +260,7 @@
                     <div class="gold-line"></div>
                     <p class="section-body">
                         Muja Photography hadir untuk merekam hari-hari yang tak akan terulang.
-                        Kami percaya bahwa fotografi bukan sekadar gambar — melainkan cara
+                        Kami percaya bahwa fotografi bukan sekadar gambar - melainkan cara
                         paling jujur untuk menyimpan perasaan.
                     </p>
                     <p class="section-body" style="margin-top: 1rem;">
@@ -268,7 +268,7 @@
                         detail, emosi, dan tatapan agar tetap hidup dalam setiap frame.
                     </p>
                     <p class="about-signature" style="margin-top: 2rem;">
-                        — <span>Muja Photography</span>, Surabaya
+                        <span>Muja Photography</span>, Surabaya
                     </p>
                 </div>
             </div>
@@ -276,7 +276,7 @@
     </section>
 
     {{-- ----------------------------------------------------------
-         SECTION 2: PORTFOLIO GALLERY — Library scroll animation (data-grid-first)
+         SECTION 2: PORTFOLIO GALLERY - Library scroll animation (data-grid-first)
     ---------------------------------------------------------- --}}
     <section class="muja-section muja-section--cream gallery-wrapper" id="portofolio-preview">
 
@@ -359,7 +359,7 @@
                     <div class="service-number">01</div>
                     <h3 class="service-title">Wedding Photography</h3>
                     <p class="service-desc">
-                        Dokumentasi lengkap hari pernikahan Anda — dari persiapan, akad, resepsi,
+                        Dokumentasi lengkap hari pernikahan Anda - dari persiapan, akad, resepsi,
                         hingga sesi foto keluarga. Dua fotografer, satu hari penuh.
                     </p>
                 </div>
@@ -375,7 +375,7 @@
                     <div class="service-number">03</div>
                     <h3 class="service-title">Peliputan Acara</h3>
                     <p class="service-desc">
-                        Sunmori, gathering komunitas, atau acara perusahaan — kami hadir
+                        Sunmori, gathering komunitas, atau acara perusahaan - kami hadir
                         dengan galeri online agar peserta bisa menemukan foto mereka sendiri.
                     </p>
                 </div>
@@ -394,13 +394,13 @@
                     Foto-fotonya bukan sekadar dokumentasi. Mereka berhasil menangkap perasaan
                     yang bahkan kami sendiri tidak sadar sedang kami rasakan di hari itu.
                 </blockquote>
-                <p class="testimonial-author">Risky &amp; Rahma — Surabaya, 2024</p>
+                <p class="testimonial-author">Risky &amp; Rahma - Surabaya, 2024</p>
             </div>
         </div>
     </section>
 
     {{-- ----------------------------------------------------------
-         SECTION 6: CTA — Booking
+         SECTION 6: CTA - Booking
     ---------------------------------------------------------- --}}
     <section class="muja-section cta-section" id="booking-cta" style="padding: 0;">
         <div class="cta-bg">
@@ -408,18 +408,18 @@
                 <source media="(max-width: 600px)" srcset="{{ asset('img/hero/mjp_2862-600.webp') }}" type="image/webp">
                 <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2862-1200.webp') }}"
                     type="image/webp">
-                <img src="{{ asset('img/hero/mjp_2862.webp') }}" alt="Background — pelaminan bertema galaksi"
+                <img src="{{ asset('img/hero/mjp_2862.webp') }}" alt="Background - pelaminan bertema galaksi"
                     loading="lazy">
             </picture>
         </div>
         <div class="cta-content">
-            <p class="cta-ornament">— ✦ —</p>
+            <p class="cta-ornament">✦</p>
             <h2 class="cta-heading">
                 Siap Mengabadikan<br>Momen <em>Terbaik</em> Anda?
             </h2>
             <p class="cta-body">
                 Amankan tanggal Anda sebelum jadwal penuh. Konsultasi gratis,
-                tanpa komitmen — cukup mulai dari satu percakapan.
+                tanpa komitmen - cukup mulai dari satu percakapan.
             </p>
             <div>
                 <a href="{{ route('booking') }}" class="btn-gold">Pesan Sekarang</a>
@@ -433,6 +433,6 @@
 @endsection
 
 @push('scripts')
-    {{-- Hero JS dari library/hero — hanya beranda yang punya blok hero --}}
+    {{-- Hero JS dari library/hero - hanya beranda yang punya blok hero --}}
     <script type="module" src="{{ asset('hero.min.js') }}"></script>
 @endpush

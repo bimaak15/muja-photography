@@ -2,7 +2,7 @@
 
 @section('title', 'Paket & Harga')
 @section('meta_description',
-    'Pricelist resmi MujaPhotography 2026 — wedding, pre-wedding, engagement, siraman, akad only,
+    'Pricelist resmi MujaPhotography 2026 - wedding, pre-wedding, engagement, siraman, akad only,
     dan graduation. Harga transparan, pembayaran aman lewat Midtrans.')
 
 @push('page_styles')
@@ -15,17 +15,18 @@
     // Harga disimpan sebagai rupiah penuh (contoh: 4.500.000).
     // ============================================================
 
-    // Wedding — AKAD · TEMU · RESEPSI
+    // Wedding - AKAD · TEMU · RESEPSI
     $weddingRumah = [
         [
             'nama' => 'Silver',
             'harga' => 4500000,
             'fitur' => [
+                'Foto & video',
                 'Foto unlimited',
                 'Video liputan',
                 'Cetak 110 4R',
                 'Album magnetic',
-                'All file in flasdisk 16GB',
+                'All file in flashdisk 16GB',
                 'Free cetak 10RS 3 lembar',
             ],
             'unggulan' => false,
@@ -34,10 +35,11 @@
             'nama' => 'Gold',
             'harga' => 5000000,
             'fitur' => [
+                'Foto & video',
                 'Foto unlimited',
                 'Video cinematic',
                 'Album magnetic',
-                'All file in flasdisk 16GB',
+                'All file in flashdisk 16GB',
                 'Free cetak 10RS 5 lembar',
             ],
             'unggulan' => true,
@@ -46,13 +48,14 @@
             'nama' => 'Platinum',
             'harga' => 7000000,
             'fitur' => [
+                'Foto & video',
                 'Foto unlimited',
                 'Video cinematic',
                 'Free prewedding outdoor / indoor',
                 'Cetak 120 4R',
                 'Album magnetic jumbo',
                 'Album magazine',
-                'All file in flasdisk 16GB',
+                'All file in flashdisk 16GB',
                 'Free cetak 10RS 5 lembar',
                 'Free cetak 16RS + frame 1pcs',
             ],
@@ -60,17 +63,18 @@
         ],
     ];
 
-    // Wedding Gedung — AKAD · TEMU · RESEPSI
+    // Wedding Gedung - AKAD · TEMU · RESEPSI
     $weddingGedung = [
         [
             'nama' => 'Silver',
             'harga' => 5000000,
             'fitur' => [
+                'Foto & video',
                 'Foto unlimited',
                 'Video cinematic',
                 'Cetak 110 4R',
                 'Album magnetic',
-                'All file in flasdisk 16GB',
+                'All file in flashdisk 16GB',
                 'Free cetak 10RS 3 lembar',
             ],
             'unggulan' => false,
@@ -79,10 +83,11 @@
             'nama' => 'Gold',
             'harga' => 6000000,
             'fitur' => [
+                'Foto & video',
                 'Foto unlimited',
                 'Video cinematic',
                 'Album magazine',
-                'All file in flasdisk 16GB',
+                'All file in flashdisk 16GB',
                 'Free cetak 10RS 5 lembar',
             ],
             'unggulan' => true,
@@ -91,13 +96,14 @@
             'nama' => 'Platinum',
             'harga' => 7500000,
             'fitur' => [
+                'Foto & video',
                 'Foto unlimited',
                 'Video cinematic',
                 'Free prewedding outdoor / indoor',
                 'Cetak 120 4R',
                 'Album magnetic jumbo',
                 'Album magazine',
-                'All file in flasdisk 16GB',
+                'All file in flashdisk 16GB',
                 'Free cetak 10RS 5 lembar',
                 'Free cetak 16RS + frame 1pcs',
             ],
@@ -105,7 +111,7 @@
         ],
     ];
 
-    // Paket lain — Engagement, Prewedding, Siraman, Akad Only, Graduation
+    // Paket lain - Engagement, Prewedding, Siraman, Akad Only, Graduation
     $kategoriLain = [
         [
             'judul' => 'Engagement',
@@ -120,7 +126,7 @@
                         'Cetak 80 4R',
                         'Album magnetic',
                         'Video cinematic 3 menit',
-                        'All file in flasdisk 16GB',
+                        'All file in flashdisk 16GB',
                     ],
                 ],
                 [
@@ -132,7 +138,7 @@
                         'Cetak 80 4R',
                         'Album magnetic',
                         'Video cinematic 3 menit',
-                        'All file in flasdisk 16GB',
+                        'All file in flashdisk 16GB',
                     ],
                 ],
             ],
@@ -142,7 +148,7 @@
             'catatan' => 'Sidoarjo · Surabaya · Mojokerto',
             'items' => [
                 [
-                    'nama' => 'Only Foto — Indoor',
+                    'nama' => 'Only Foto - Indoor',
                     'harga' => 1000000,
                     'fitur' => [
                         '2 fotografer',
@@ -152,7 +158,7 @@
                     ],
                 ],
                 [
-                    'nama' => 'Only Foto — Outdoor',
+                    'nama' => 'Only Foto - Outdoor',
                     'harga' => 1500000,
                     'fitur' => [
                         '2 fotografer',
@@ -199,7 +205,7 @@
                         'Cetak 80 4R',
                         'Album magnetic',
                         'Video cinematic',
-                        'All file in flasdisk 16GB',
+                        'All file in flashdisk 16GB',
                     ],
                 ],
                 [
@@ -211,7 +217,7 @@
                         'Cetak 80 4R',
                         'Album magnetic',
                         'Video cinematic',
-                        'All file in flasdisk 16GB',
+                        'All file in flashdisk 16GB',
                     ],
                 ],
             ],
@@ -229,7 +235,7 @@
                         '100 edited file',
                         'Video cinematic',
                         'Album magnetic',
-                        'All file in flasdisk',
+                        'All file in flashdisk',
                         'Cetak 10RS 2 lembar',
                     ],
                 ],
@@ -269,26 +275,6 @@
                     ],
                 ],
             ],
-        ],
-    ];
-
-    // Catatan penting — sesuai pricelist resmi
-    $catatan = [
-        [
-            'judul' => 'Belum Termasuk Transport',
-            'teks' => 'Biaya transportasi belum termasuk dan dihitung terpisah sesuai jarak lokasi acara.',
-        ],
-        [
-            'judul' => 'File Hanya 60 Hari',
-            'teks' => 'Semua file bertahan 60 hari di Google Drive. Unduh dan simpan sebelum masa berlaku habis.',
-        ],
-        [
-            'judul' => 'Area Layanan',
-            'teks' => 'Sidoarjo, Surabaya, dan Mojokerto. Untuk lokasi lain, hubungi kami terlebih dahulu.',
-        ],
-        [
-            'judul' => 'Pembayaran Aman',
-            'teks' => 'DP dibayar lewat Midtrans Snap: transfer bank, e-wallet, kartu kredit, atau QRIS.',
         ],
     ];
 
@@ -333,7 +319,7 @@
     <main>
 
         {{-- ============================================================
-             HERO HALAMAN — background foto sementara
+             HERO HALAMAN - background foto sementara
         ============================================================ --}}
         <section class="price-hero">
             <div class="price-hero__bg">
@@ -343,17 +329,17 @@
                     <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2862-1200.webp') }}"
                         type="image/webp">
                     <img src="{{ asset('img/hero/mjp_2862.webp') }}"
-                        alt="Pasangan pengantin di depan backdrop bertema galaksi — MujaPhotography">
+                        alt="Pasangan pengantin di depan backdrop bertema galaksi - MujaPhotography">
                 </picture>
             </div>
             <div class="price-hero__content">
-                <p class="price-hero__ornament" aria-hidden="true">— ✦ —</p>
+                <p class="price-hero__ornament" aria-hidden="true">✦</p>
                 <span class="section-label">Paket &amp; Harga</span>
                 <h1 class="price-hero__title">
                     Investasi untuk <em>Kenangan</em><br>yang Tak Terulang
                 </h1>
                 <p class="price-hero__sub">
-                    Pricelist resmi 2026 — dari pre-wedding, engagement, siraman,
+                    Pricelist resmi 2026 - dari pre-wedding, engagement, siraman,
                     hingga paket wedding lengkap. Isi paket dan harganya kami
                     tulis apa adanya, tanpa biaya tersembunyi.
                 </p>
@@ -361,17 +347,20 @@
         </section>
 
         {{-- ============================================================
-             PAKET WEDDING — dengan pemilih lokasi acara
+             PAKET WEDDING - dengan pemilih lokasi acara & background SCRL_0046.webp
         ============================================================ --}}
-        <section class="muja-section muja-section--cream price-section" id="daftar-paket">
-            <div class="muja-container">
+        <section class="muja-section price-section price-section--photo" id="daftar-paket">
+            <div class="price-section__bg" aria-hidden="true">
+                <img src="{{ asset('SCRL_0046.webp') }}" alt="" loading="lazy">
+            </div>
+            <div class="muja-container price-section__inner">
                 <div class="price-header">
                     <span class="section-label">Wedding</span>
                     <h2 class="section-heading">Paket <em>Wedding</em></h2>
                     <div class="gold-line gold-line--center"></div>
                     <p class="section-body price-intro">
                         Untuk akad, temu keluarga, dan resepsi. Pilih dulu lokasi
-                        acaranya — isi paket dan harganya menyesuaikan.
+                        acaranya - isi paket dan harganya menyesuaikan.
                     </p>
                 </div>
 
@@ -407,7 +396,7 @@
                                 </ul>
 
                                 <a href="{{ route('booking') }}"
-                                    class="price-cta {{ $item['unggulan'] ? 'btn-gold' : 'btn-outline-dark' }}">
+                                    class="price-cta {{ $item['unggulan'] ? 'btn-gold' : 'btn-outline-gold' }}">
                                     Pilih Paket {{ $item['nama'] }}
                                 </a>
                             </article>
@@ -437,7 +426,7 @@
                                 </ul>
 
                                 <a href="{{ route('booking') }}"
-                                    class="price-cta {{ $item['unggulan'] ? 'btn-gold' : 'btn-outline-dark' }}">
+                                    class="price-cta {{ $item['unggulan'] ? 'btn-gold' : 'btn-outline-gold' }}">
                                     Pilih Paket {{ $item['nama'] }}
                                 </a>
                             </article>
@@ -454,33 +443,19 @@
         </section>
 
         {{-- ============================================================
-             CATATAN PENTING
-        ============================================================ --}}
-        <section class="muja-section included-section" id="catatan">
-            <div class="muja-container">
-                <div class="included-grid">
-                    @foreach ($catatan as $index => $poin)
-                        <div class="included-item">
-                            <span class="included-number">0{{ $index + 1 }}</span>
-                            <h3 class="included-title">{{ $poin['judul'] }}</h3>
-                            <p class="included-desc">{{ $poin['teks'] }}</p>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-
-        {{-- ============================================================
              PAKET LAINNYA
         ============================================================ --}}
-        <section class="muja-section muja-section--cream price-section" id="paket-lain">
-            <div class="muja-container">
+        <section class="muja-section price-section price-section--photo" id="paket-lain">
+            <div class="price-section__bg" aria-hidden="true">
+                <img src="{{ asset('SCRL_0052.webp') }}" alt="" loading="lazy">
+            </div>
+            <div class="muja-container price-section__inner">
                 <div class="price-header">
                     <span class="section-label">Paket Lainnya</span>
                     <h2 class="section-heading">Sesi <em>Tersendiri</em></h2>
                     <div class="gold-line gold-line--center"></div>
                     <p class="section-body price-intro">
-                        Engagement, pre-wedding, siraman, akad only, hingga wisuda —
+                        Engagement, pre-wedding, siraman, akad only, hingga wisuda,
                         masing-masing punya paket sendiri dengan isi yang jelas.
                     </p>
                 </div>
@@ -542,7 +517,7 @@
         </section>
 
         {{-- ============================================================
-             CTA — Booking + Kontak
+             CTA - Booking + Kontak
         ============================================================ --}}
         <section class="muja-section cta-section" id="booking-cta" style="padding: 0;">
             <div class="cta-bg">
@@ -552,17 +527,17 @@
                     <source media="(max-width: 1200px)" srcset="{{ asset('img/hero/mjp_2682-1200.webp') }}"
                         type="image/webp">
                     <img src="{{ asset('img/hero/mjp_2682.webp') }}"
-                        alt="Pengantin tertawa bersama di depan lampu gantung — MujaPhotography" loading="lazy">
+                        alt="Pengantin tertawa bersama di depan lampu gantung - MujaPhotography" loading="lazy">
                 </picture>
             </div>
             <div class="cta-content">
-                <p class="cta-ornament">— ✦ —</p>
+                <p class="cta-ornament">✦</p>
                 <h2 class="cta-heading">
                     Sudah Menemukan<br>Paket <em>Anda?</em>
                 </h2>
                 <p class="cta-body">
                     Amankan tanggal sebelum jadwal penuh. Konsultasi gratis, tanpa
-                    komitmen — cukup mulai dari satu percakapan.
+                    komitmen - cukup mulai dari satu percakapan.
                 </p>
                 <div>
                     <a href="{{ route('booking') }}" class="btn-gold">Pesan Sekarang</a>

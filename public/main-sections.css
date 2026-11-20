@@ -1,5 +1,5 @@
-﻿/* ============================================================
-   MUJA PHOTOGRAPHY — Main Sections (After Hero)
+/* ============================================================
+   MUJA PHOTOGRAPHY - Main Sections (After Hero)
    Elegant, clean, warm-dark aesthetic with gold accents
 ============================================================ */
 
@@ -87,7 +87,7 @@
 
 
 /* ============================================================
-   SECTION 1: ABOUT — Split layout (image + text)
+   SECTION 1: ABOUT - Split layout (image + text)
 ============================================================ */
 
 .about-grid {
@@ -153,7 +153,7 @@
 
 
 /* ============================================================
-   SECTION 2: PORTFOLIO GALLERY — Masonry grid
+   SECTION 2: PORTFOLIO GALLERY - Masonry grid
 ============================================================ */
 
 .gallery-header {
@@ -249,7 +249,7 @@
 
 
 /* ============================================================
-   SECTION 3: SERVICES — Clean cards
+   SECTION 3: SERVICES - Clean cards
 ============================================================ */
 
 .services-header {
@@ -309,7 +309,7 @@
 
 
 /* ============================================================
-   SECTION 4: PROCESS — Horizontal numbered steps
+   SECTION 4: PROCESS - Horizontal numbered steps
 ============================================================ */
 
 .process-header {
@@ -383,7 +383,7 @@
 
 
 /* ============================================================
-   SECTION 5: TESTIMONIAL — Quote block
+   SECTION 5: TESTIMONIAL - Quote block
 ============================================================ */
 
 .testimonial-wrapper {
@@ -426,7 +426,7 @@
 
 
 /* ============================================================
-   SECTION 6: CTA — Booking call-to-action
+   SECTION 6: CTA - Booking call-to-action
 ============================================================ */
 
 .cta-section {
@@ -530,7 +530,7 @@
 
 
 /* ============================================================
-   SECTION 7: FOOTER — Minimal elegant footer
+   SECTION 7: FOOTER - Minimal elegant footer
 ============================================================ */
 
 .muja-footer {
@@ -638,7 +638,7 @@
 
 
 /* ============================================================
-   RESPONSIVE — Main sections
+   RESPONSIVE - Main sections
 ============================================================ */
 
 @media (max-width: 64rem) {
